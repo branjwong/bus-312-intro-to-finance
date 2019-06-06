@@ -33,3 +33,63 @@ Tax 40%         200     80                                      -120            
     - x_y = recalculation of year x after year y
     - x' = recalculation of year x after recalculation of some previous year
 
+CCA
+---
+
+1. Calculate net additions
+
+    - :math:`Acquisiton - Disposals`
+
+        - acq: valued at cost
+        - disp: losses of cost and selling price
+
+2. If positive, add CCA = half of net additions to UCC and calc CCA
+
+    - UCC: Undepreciated Capital Cost
+
+3. If negative, add the (neg) number to UCC and calculate CCA
+
+
+Example
+```````
+
+Starting UCC = 4000
+CCA rate = 50%
+
+Yr 1:
+
+- buy an asset for 800
+- and sell another for 500 (original cost = 900)
+
+Yr 2: nothing
+
+Yr 3: 
+
+- buy an asset for 400
+- and sell another for 800 (original cost = 500)
+
+Yr 4: nothing
+
+Year    Start UCC   Net additions   CCA         End UCC
+1       4000        300 (a)         2075 (b)    2225 (c)
+2       2225        0               1112.5 (d)  1112.5 (e)
+3       1112.5      -100 (f)        506.25 (g)  506.25 (h)
+4       506.25      0               253.12      253.12
+
+(a) &= 800-500=300
+(b) &= (1/2 year rule * 3000 + 4000) * CCA rate
+    &= (0.5*3000+4000)*0.5
+    
+(c) &= 4300-2075 = 2225 
+(d) &= CCA rate * UCC
+    &= 0.5 * 2225 = 11125
+
+(e) UCC_{end} = UCC_{start} - CCA
+    = 1112.5
+
+(f) Net Add = 400 - 500 = -100
+(g) CCA = CCA rate * (1112.5 - 100) = 506.25
+
+(h) UCC_{end}   = UCC_{start} - CCA
+                = (1112.5 - 100) - 506.25
+                = 506.25

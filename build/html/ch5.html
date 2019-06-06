@@ -139,7 +139,13 @@
 <li class="toctree-l2"><a class="reference internal" href="ch4.html#new-example">New Example</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Taxation and Investment Returns</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Taxation and Investment Returns</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cca">CCA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="class_info.html">Class Info</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="class_info.html#assignments">assignments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="class_info.html#quizzes">quizzes</a></li>
@@ -327,6 +333,74 @@
 <li>x’ = recalculation of year x after recalculation of some previous year</li>
 </ul>
 </div></blockquote>
+<div class="section" id="cca">
+<h2>CCA<a class="headerlink" href="#cca" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Calculate net additions</p>
+<blockquote>
+<div><ul>
+<li><p class="first"><span class="math notranslate nohighlight">\(Acquisiton - Disposals\)</span></p>
+<blockquote>
+<div><ul class="simple">
+<li>acq: valued at cost</li>
+<li>disp: losses of cost and selling price</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">If positive, add CCA = half of net additions to UCC and calc CCA</p>
+<blockquote>
+<div><ul class="simple">
+<li>UCC: Undepreciated Capital Cost</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">If negative, add the (neg) number to UCC and calculate CCA</p>
+</li>
+</ol>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>Starting UCC = 4000
+CCA rate = 50%</p>
+<p>Yr 1:</p>
+<ul class="simple">
+<li>buy an asset for 800</li>
+<li>and sell another for 500 (original cost = 900)</li>
+</ul>
+<p>Yr 2: nothing</p>
+<p>Yr 3:</p>
+<ul class="simple">
+<li>buy an asset for 400</li>
+<li>and sell another for 800 (original cost = 500)</li>
+</ul>
+<p>Yr 4: nothing</p>
+<p>Year    Start UCC   Net additions   CCA         End UCC
+1       4000        300 (a)         2075 (b)    2225 (c)
+2       2225        0               1112.5 (d)  1112.5 (e)
+3       1112.5      -100 (f)        506.25 (g)  506.25 (h)
+4       506.25      0               253.12      253.12</p>
+<ol class="loweralpha simple">
+<li>&amp;= 800-500=300</li>
+<li>&amp;= (1/2 year rule * 3000 + 4000) * CCA rate
+&amp;= (0.5*3000+4000)*0.5</li>
+<li>&amp;= 4300-2075 = 2225</li>
+<li>&amp;= CCA rate * UCC
+&amp;= 0.5 * 2225 = 11125</li>
+<li>UCC_{end} = UCC_{start} - CCA
+= 1112.5</li>
+<li>Net Add = 400 - 500 = -100</li>
+<li>CCA = CCA rate * (1112.5 - 100) = 506.25</li>
+<li><dl class="first docutils">
+<dt>UCC_{end}   = UCC_{start} - CCA</dt>
+<dd>= (1112.5 - 100) - 506.25
+= 506.25</dd>
+</dl>
+</li>
+</ol>
+</div>
+</div>
 </div>
 
 
