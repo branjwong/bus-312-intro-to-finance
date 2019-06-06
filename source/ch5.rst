@@ -93,3 +93,30 @@ Year    Start UCC   Net additions   CCA         End UCC
 (h) UCC_{end}   = UCC_{start} - CCA
                 = (1112.5 - 100) - 506.25
                 = 506.25
+
+Another Example
+---------------
+
+Buy a vehicle for 80000
+        :math:`\net CCA = 50000`
+
+
+                Scenario 1              Scenario 2
+                -----                   ------
+UCC =           30000   
+Sell for        20000                   40000
+                -----                   ------
+                10000                   -10000
+Terminal Loss   10000   CCA Recapture   10000
+                -----                   ------
+                0                       0
+
+Loss of value = 80000-20000=60000
+
+Terminal loss ~ (can be thought of extra CCA)
+
+    - only occurs if balance is positive and the last asset is sold
+
+CCA Recapture ~ "we, the CRA, gave you too much CCA in past and now we're reclaiming taxable income"
+
+    - only whenever the balance goes negative
