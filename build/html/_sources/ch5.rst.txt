@@ -1,0 +1,34 @@
+Taxation and Investment Returns
+===============================
+
+.. math:: Taxable Income = \frac {Taxes} {Net Income}
+
+- capital gain occurs when you sell an asset for more than it costs
+- capital loss only occurs if you sold a non-depreciable asset for less than it cost.
+
+- capital gains inclusion rate: 50%
+
+    - better to have cash coming in as capital gain vs. say interest b/c capital gains are taxed less
+    - 50% is the number that's currently used as per current tax regulations
+
+
+1. Determine net gapital gain
+2. If Positive, add 50% to taxable Income
+3. If negative, can go back 3 years to write off 
+
+    - if you paid capital gains tax within 3 years before, you can get a tax refund against your current year's capital loss
+
+4. If still negative, can carry fowards indefinitely
+
+============    =====   =============== =============== ====    ====    =====   ====    ================    ====    ====    ====
+Yr              1       :math:`1^{yr3}` :math:`1^{yr3}` 2       3       4       4'      :math:`1^{yr13}`    ...     13      13'
+============    =====   =============== =============== ====    ====    =====   ====    ================    ====    ====    ====
+Net Cap Gain    1000    400             0                       -600    -1000   -600    0                           2000    1400
+EBT             500     200                                                                                                 700
+Tax 40%         200     80                                      -120            -80                                         280
+============    =====   =============== =============== ====    ====    =====   ====    ================    ====    ====    ====
+
+
+    - EBT = Nat Cap Gain * Capital Gains Inclusion Rate
+    - x_y = recalculation of year x after year y
+    - x' = recalculation of year x after recalculation of some previous year
