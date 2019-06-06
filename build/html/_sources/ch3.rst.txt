@@ -2,23 +2,27 @@ Corporate Risk
 ==============
 
 
-example
--------
+Idk what this example illustrates
+----------------------------------
 
 ==========  ==========
 sell price  = 5
 cost        = 3
------------ ----------
+\           \
 margin      = 2 or 40%
------------ ----------
+\           \
 FC          = 5000
 ==========  ==========
 
-Sales
-VC = Variable Costs
-FC = Fixed Costs
------------------
-EBITDA (Breakeven)
+.. math::
+
+    VC = Variable Costs \\
+    FC = Fixed Costs \\
+    Sales - VC - FC = EBITDA (Breakeven)
+
+Degree Of Operating Leverage (DOL)
+----------------------------------
+
 
 - imagine two companies with same product, price point, etc.etc., except only that they have different cost structures
 
@@ -26,9 +30,6 @@ EBITDA (Breakeven)
     - e.g. better machinery, less workers vs. worse machienery, more workers
 
         - machinery -> FC, workers -> VC
-
-Degree Of Operating Leverage (DOL)
-----------------------------------
 
 .. math:: 
 
@@ -38,30 +39,48 @@ Degree Of Operating Leverage (DOL)
 
     .. math::
 
-        EBITDA &= Sales - VC - FC                           (1)
+        EBITDA &= Sales - VC - FC                           (1) \\
+        \\
 
-        if Sales \uparrow 1% then
+        if Sales \uparrow 1 \% then
+        \\
 
-        EBITDA*         &= 1.01 * Sales - 1.01 * VC - FC    (2)
-
-        \delta EBITDA   &= 0.01 * Sales - 0.01 * VC         (2 - 1)
-
-        % \delta EBITDA &= \frac {\delta EBITDA} {EBITDA} \\
+        EBITDA*         &= 1.01 * Sales - 1.01 * VC - FC    (2) \\
+        \Delta EBITDA   &= 0.01 * Sales - 0.01 * VC         (2 - 1) \\
+        \% \Delta EBITDA &= \frac {\Delta EBITDA} {EBITDA} \\
+        \\
                         &= \frac {0.01 * Sales - 0.01 * VC} {Sales - VC - FC}
+        \\
+        \\
+
+        and 
+        \\
 
         DOL &= \frac {\frac {0.01 Sales - 0.01 VC} {Sales - VC - FC}} {0.01} \\
+        \\
             &= \frac {Sales - VC} {Sales - VC - FC}
+
+
+Contirbution Margin
+-------------------
 
 .. math::
 
-    S - VC = Units Sold * \frac {Contribution Margin (CM)} {Unit}
+    S - VC = Units Sold * \frac {Contribution Margin (CM)} {Unit} \\
+    \\
     DOL = \frac {\frac {CM} {Unit} * Unit Sales} {\frac {CM} {Unit} * Unit Sales - FC}
 
-    also 
+also 
 
-    S - VC = Sales * \frac {Contribution Margin (CM)} {$}
+.. math::
+
+    S - VC = Sales * \frac {Contribution Margin (CM)} {$} \\
+    \\
     DOL = \frac {\frac {CM} {$} * Sales} {\frac {CM} {$} * Sales - FC}
 
+
+How DOL Affects EBITDA
+----------------------
 
 - when fixed costs are high, risk is high
 
@@ -69,35 +88,47 @@ Degree Of Operating Leverage (DOL)
     - when times are good, you get a lot of $$ b/c of low VC
 
 
-=================== =================================================   ===============================================
-\                   Capital Intensive                                   Labour Intensive
-=================== =================================================   ===============================================
-Sales               10,000                                              10,000
-VC %                20%                                                 60%
-VC                  2000                                                6000
-FC                  6000                                                2000
-\                   \                                                   \
-EBITDA              2000                                                2000
-\                   \                                                   \
-Sales \uparrow 10%  11000                                               11000
-VC                  2200                                                6600
-FC                  6000                                                2000
-\                   \                                                   \
-EBITDA              2800                                                2400
-DOL                 :math: \frac {0.8 * 1000} / {0.8*1000-6000} = 4     :math: \frac {0.4 * 1000} / {0.4*1000-2000} = 2
-=================== =================================================   ===============================================
+Example
+```````
 
-    A       B 
-==  ====    ====
-D   4000    6000
-E   6000    4000
-\   \       \
-    10000   10000
+=========================== =================================================   ================================================
+\                           Capital Intensive                                   Labour Intensive
+=========================== =================================================   ================================================
+Sales                       10,000                                              10,000
+VC %                        20%                                                 60%
+VC                          2000                                                6000
+FC                          6000                                                2000
+\                           \                                                   \
+EBITDA                      2000                                                2000
+\                           \                                                   \
+Sales :math:`\uparrow` 10%  11000                                               11000
+VC                          2200                                                6600
+FC                          6000                                                2000
+\                           \                                                   \
+EBITDA                      2800                                                2400
+DOL                         :math:`\frac {0.8 * 1000} {0.8*1000-6000} = 4`      :math:`\frac {0.4 * 1000} {0.4*1000-2000} = 2`
+=========================== =================================================   ================================================
 
-:math:r_d = 10%
+Capital Structure's Effect on ROE
+---------------------------------
+- return on equity depends on the capital structure of the firm
+
+Example
+```````
+
+:math:`r_d = 10%`
+
+======= ======  ======
+\       A       B 
+======= ======  ======
+Debt    4000    6000
+Equity  6000    4000
+\       \       \
+\       10000   10000
+======= ======  ======
 
 =========   =====   =====   =====   =====
-            A       A'      B       B'
+\           A       A'      B       B'
 =========   =====   =====   =====   =====
 EBIT        2000    2400    2000    2400
 Int         400     400     600     600

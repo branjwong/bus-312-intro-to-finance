@@ -127,8 +127,17 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Corporate Risk</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#example">example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#idk-what-this-example-illustrates">Idk what this example illustrates</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#degree-of-operating-leverage-dol">Degree Of Operating Leverage (DOL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contirbution-margin">Contirbution Margin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-dol-affects-ebitda">How DOL Affects EBITDA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#capital-structure-s-effect-on-roe">Capital Structure’s Effect on ROE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Example</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ch4.html">Corporate Financial Planning</a><ul>
@@ -147,6 +156,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ch5.html#another-example">Another Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch5.html#id1">Another Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ch6.html">The Mathematics of Finance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ch6.html#present-value-vs-future-value">Present Value vs Future Value</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="class_info.html">Class Info</a><ul>
@@ -226,13 +240,41 @@
             
   <div class="section" id="corporate-risk">
 <h1>Corporate Risk<a class="headerlink" href="#corporate-risk" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="example">
-<h2>example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<p>Sales
-VC = Variable Costs
-FC = Fixed Costs
-—————–
-EBITDA (Breakeven)</p>
+<div class="section" id="idk-what-this-example-illustrates">
+<h2>Idk what this example illustrates<a class="headerlink" href="#idk-what-this-example-illustrates" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>sell price</td>
+<td>= 5</td>
+</tr>
+<tr class="row-even"><td>cost</td>
+<td>= 3</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td>margin</td>
+<td>= 2 or 40%</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td>FC</td>
+<td>= 5000</td>
+</tr>
+</tbody>
+</table>
+<div class="math notranslate nohighlight">
+\[\begin{split}VC = Variable Costs \\
+FC = Fixed Costs \\
+Sales - VC - FC = EBITDA (Breakeven)\end{split}\]</div>
+</div>
+<div class="section" id="degree-of-operating-leverage-dol">
+<h2>Degree Of Operating Leverage (DOL)<a class="headerlink" href="#degree-of-operating-leverage-dol" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">imagine two companies with same product, price point, etc.etc., except only that they have different cost structures</p>
 <blockquote>
@@ -250,22 +292,39 @@ EBITDA (Breakeven)</p>
 </div></blockquote>
 </li>
 </ul>
-</div>
-<div class="section" id="degree-of-operating-leverage-dol">
-<h2>Degree Of Operating Leverage (DOL)<a class="headerlink" href="#degree-of-operating-leverage-dol" title="Permalink to this headline">¶</a></h2>
 <div class="math notranslate nohighlight">
 \[DOL = Percent Change In EBITDA + Percent Change in Sales\]</div>
 <div class="admonition-derivation-of-dol admonition">
 <p class="first admonition-title">Derivation of DOL</p>
 <div class="last math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}EBITDA &amp;= Sales - VC - FC                           (1)\\if Sales \uparrow 1% then\\EBITDA*         &amp;= 1.01 * Sales - 1.01 * VC - FC    (2)\\\delta EBITDA   &amp;= 0.01 * Sales - 0.01 * VC         (2 - 1)\\\begin{split}% \delta EBITDA &amp;= \frac {\delta EBITDA} {EBITDA} \\
-                &amp;= \frac {0.01 * Sales - 0.01 * VC} {Sales - VC - FC}\end{split}\\\begin{split}DOL &amp;= \frac {\frac {0.01 Sales - 0.01 VC} {Sales - VC - FC}} {0.01} \\
+\[ \begin{align}\begin{aligned}\begin{split}EBITDA &amp;= Sales - VC - FC                           (1) \\
+\\\end{split}\\\begin{split}if Sales \uparrow 1 \% then
+\\\end{split}\\\begin{split}EBITDA*         &amp;= 1.01 * Sales - 1.01 * VC - FC    (2) \\
+\Delta EBITDA   &amp;= 0.01 * Sales - 0.01 * VC         (2 - 1) \\
+\% \Delta EBITDA &amp;= \frac {\Delta EBITDA} {EBITDA} \\
+\\
+                &amp;= \frac {0.01 * Sales - 0.01 * VC} {Sales - VC - FC}
+\\
+\\\end{split}\\\begin{split}and
+\\\end{split}\\\begin{split}DOL &amp;= \frac {\frac {0.01 Sales - 0.01 VC} {Sales - VC - FC}} {0.01} \\
+\\
     &amp;= \frac {Sales - VC} {Sales - VC - FC}\end{split}\end{aligned}\end{align} \]</div>
 </div>
+</div>
+<div class="section" id="contirbution-margin">
+<h2>Contirbution Margin<a class="headerlink" href="#contirbution-margin" title="Permalink to this headline">¶</a></h2>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}S - VC = Units Sold * \frac {Contribution Margin (CM)} {Unit}
-DOL = \frac {\frac {CM} {Unit} * Unit Sales} {\frac {CM} {Unit} * Unit Sales - FC}\\also\\S - VC = Sales * \frac {Contribution Margin (CM)} {$}
-DOL = \frac {\frac {CM} {$} * Sales} {\frac {CM} {$} * Sales - FC}\end{aligned}\end{align} \]</div>
+\[\begin{split}S - VC = Units Sold * \frac {Contribution Margin (CM)} {Unit} \\
+\\
+DOL = \frac {\frac {CM} {Unit} * Unit Sales} {\frac {CM} {Unit} * Unit Sales - FC}\end{split}\]</div>
+<p>also</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S - VC = Sales * \frac {Contribution Margin (CM)} {$} \\
+\\
+DOL = \frac {\frac {CM} {$} * Sales} {\frac {CM} {$} * Sales - FC}\end{split}\]</div>
+</div>
+<div class="section" id="how-dol-affects-ebitda">
+<h2>How DOL Affects EBITDA<a class="headerlink" href="#how-dol-affects-ebitda" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">when fixed costs are high, risk is high</p>
 <blockquote>
@@ -276,11 +335,13 @@ DOL = \frac {\frac {CM} {$} * Sales} {\frac {CM} {$} * Sales - FC}\end{aligned}\
 </div></blockquote>
 </li>
 </ul>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="17%" />
-<col width="43%" />
-<col width="41%" />
+<col width="22%" />
+<col width="40%" />
+<col width="39%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head"></th>
@@ -317,7 +378,7 @@ DOL = \frac {\frac {CM} {$} * Sales} {\frac {CM} {$} * Sales - FC}\end{aligned}\
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td>Sales uparrow 10%</td>
+<tr class="row-odd"><td>Sales <span class="math notranslate nohighlight">\(\uparrow\)</span> 10%</td>
 <td>11000</td>
 <td>11000</td>
 </tr>
@@ -338,31 +399,52 @@ DOL = \frac {\frac {CM} {$} * Sales} {\frac {CM} {$} * Sales - FC}\end{aligned}\
 <td>2400</td>
 </tr>
 <tr class="row-even"><td>DOL</td>
-<td><table class="first last docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
+<td><span class="math notranslate nohighlight">\(\frac {0.8 * 1000} {0.8*1000-6000} = 4\)</span></td>
+<td><span class="math notranslate nohighlight">\(\frac {0.4 * 1000} {0.4*1000-2000} = 2\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="capital-structure-s-effect-on-roe">
+<h2>Capital Structure’s Effect on ROE<a class="headerlink" href="#capital-structure-s-effect-on-roe" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>return on equity depends on the capital structure of the firm</li>
+</ul>
+<div class="section" id="id1">
+<h3>Example<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p><span class="math notranslate nohighlight">\(r_d = 10%\)</span></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="32%" />
+<col width="32%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"></th>
+<th class="head">A</th>
+<th class="head">B</th>
+</tr>
+</thead>
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">math:</th><td class="field-body">frac {0.8 * 1000} / {0.8*1000-6000} = 4</td>
+<tr class="row-even"><td>Debt</td>
+<td>4000</td>
+<td>6000</td>
+</tr>
+<tr class="row-odd"><td>Equity</td>
+<td>6000</td>
+<td>4000</td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td>10000</td>
+<td>10000</td>
 </tr>
 </tbody>
 </table>
-</td>
-<td><table class="first last docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">math:</th><td class="field-body">frac {0.4 * 1000} / {0.4*1000-2000} = 2</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<div>A       B</div></blockquote>
-<blockquote>
-<div>A       A’      B       B’</div></blockquote>
 <table border="1" class="docutils">
 <colgroup>
 <col width="31%" />
@@ -371,36 +453,26 @@ DOL = \frac {\frac {CM} {$} * Sales} {\frac {CM} {$} * Sales - FC}\end{aligned}\
 <col width="17%" />
 <col width="17%" />
 </colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"></th>
+<th class="head">A</th>
+<th class="head">A’</th>
+<th class="head">B</th>
+<th class="head">B’</th>
+</tr>
+</thead>
 <tbody valign="top">
-<tr class="row-odd"><td>EBIT</td>
+<tr class="row-even"><td>EBIT</td>
 <td>2000</td>
 <td>2400</td>
 <td>2000</td>
 <td>2400</td>
 </tr>
-<tr class="row-even"><td>Int</td>
+<tr class="row-odd"><td>Int</td>
 <td>400</td>
 <td>400</td>
 <td>600</td>
 <td>600</td>
-</tr>
-<tr class="row-odd"><td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-even"><td>EBT</td>
-<td>1600</td>
-<td>2000</td>
-<td>1400</td>
-<td>1800</td>
-</tr>
-<tr class="row-odd"><td>Tax &#64; 40%</td>
-<td>840</td>
-<td>800</td>
-<td>560</td>
-<td>720</td>
 </tr>
 <tr class="row-even"><td></td>
 <td></td>
@@ -408,13 +480,31 @@ DOL = \frac {\frac {CM} {$} * Sales} {\frac {CM} {$} * Sales - FC}\end{aligned}\
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td>NI</td>
+<tr class="row-odd"><td>EBT</td>
+<td>1600</td>
+<td>2000</td>
+<td>1400</td>
+<td>1800</td>
+</tr>
+<tr class="row-even"><td>Tax &#64; 40%</td>
+<td>840</td>
+<td>800</td>
+<td>560</td>
+<td>720</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td>NI</td>
 <td>960</td>
 <td>1200</td>
 <td>840</td>
 <td>1080</td>
 </tr>
-<tr class="row-even"><td>ROE</td>
+<tr class="row-odd"><td>ROE</td>
 <td>0.16</td>
 <td>0.2</td>
 <td>0.21</td>
@@ -422,6 +512,7 @@ DOL = \frac {\frac {CM} {$} * Sales} {\frac {CM} {$} * Sales - FC}\end{aligned}\
 </tr>
 </tbody>
 </table>
+</div>
 </div>
 </div>
 

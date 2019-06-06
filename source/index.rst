@@ -15,6 +15,7 @@ Welcome to BUS 312 Introduction To Finance's documentation!
     ch3
     ch4
     ch5
+    ch6
     class_info
 
 

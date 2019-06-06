@@ -120,3 +120,49 @@ Terminal loss ~ (can be thought of extra CCA)
 CCA Recapture ~ "we, the CRA, gave you too much CCA in past and now we're reclaiming taxable income"
 
     - only whenever the balance goes negative
+
+
+Another Example
+---------------
+
+- some examples of taxable income
+
+Salary                  Directly
++- Alimony              Directly
+- RRSP contribution     Directly
++ Interest received     Directly
++ Capital gains         * 0.5
++ Canadian Divs         Gross up by 40% (increase?)
++ Non Canadian Divs     Directly
+
+Salary                      60000
+Interest                    20000
+Capital gain    60000 ->    30000
+Can Divs        10000 ->    14000
+Non Can Divs                40000
+                            -------
+Taxable Income              110000
+Net Federal Tax (b)         18100
+Net Provincial Tax (given)  17000
+                            -------
+Net Income                  74900
+
+
+(a)
+Fed Tax
+0 - 40000   15%     6000
+40k-80000   22%     8800
+80k-120k    26%     7800
+> 120k      29%
+                    -----
+Tax paid            22600
+
+
+(b)
+Basic Fed Tax               22600 (a)
+Basic Personal Tax Cr       -1500 (given)
+Div Tax Cr (30% of div)     -3000
+                            -------
+Net Federal Tax             18100
+
+
