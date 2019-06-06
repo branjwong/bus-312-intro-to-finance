@@ -293,7 +293,8 @@
 </div>
 <div class="section" id="principal-repayment-projection">
 <h3>Principal Repayment Projection<a class="headerlink" href="#principal-repayment-projection" title="Permalink to this headline">¶</a></h3>
-<p>Principal Payment = Montly Repayment - Interest Accumulated for Month</p>
+<div class="math notranslate nohighlight">
+\[Principal Payment = Montly Repayment - Interest Accumulated for Month\]</div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>        <span class="n">Start</span> <span class="n">Debt</span>  <span class="n">Int</span>         <span class="n">Principal</span> <span class="n">Payment</span>   <span class="n">End</span> <span class="n">Debt</span>
 <span class="n">Oct</span>     <span class="mi">400</span><span class="p">,</span><span class="mi">000</span>     <span class="mi">4000</span>        <span class="mf">1738.84</span>             <span class="mi">398</span><span class="p">,</span><span class="mf">261.16</span>
 <span class="n">Nov</span>     <span class="mi">398</span><span class="p">,</span><span class="mf">261.16</span>  <span class="mf">3982.61</span>     <span class="mf">1756.23</span>             <span class="mi">396</span><span class="p">,</span><span class="mf">504.93</span>
@@ -324,7 +325,7 @@ Int Paid STD                    | 0
 Int Paid LTD                    |-4000     -3983.23
 Princ LTD                       |-1738.84  -
 \               \       \       | \         \           \
-:math:`\delta` Cash*            |-333,529   2427        -7549
+:math:`\Delta` Cash*            |-333,529   2427        -7549
 Cash Balance Start              | 221,000   100,000     100,000
 Cash Before Bef Borrow          |-112,529   102,427     92,480
 ST Borrowing                    | 212,529   -2427       7840
@@ -332,15 +333,10 @@ End Cash                221,000 | 100,000   100,000     100,000
 ST Debt                         | 212,529   210,101     217,642
 </pre></div>
 </div>
+<p>* this is a cash flow</p>
 <ul class="simple">
-<li>delta Cash is the sum of all of the Cash* flow stuff</li>
-</ul>
-<ul class="simple">
-<li>: this is a cash flow</li>
-</ul>
-<ul class="simple">
+<li><span class="math notranslate nohighlight">\(\Delta\)</span> Cash is the sum of all of the Cash* flow stuff</li>
 <li>left some historical stuff blank because we didn’t need them for projections</li>
-<li>wages</li>
 </ul>
 </div>
 <div class="section" id="income-statement">
@@ -352,77 +348,73 @@ ST Debt                         | 212,529   210,101     217,642
 <col width="55%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head" colspan="3">&#160;</th>
+<tr class="row-odd"><th class="head"></th>
+<th class="head">1st 9 Months to Sep30</th>
+<th class="head">3 Months to Dec 31</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td>Revenue</td>
+<tr class="row-even"><td>Revenue</td>
 <td>2,000,000*</td>
 <td>900,000</td>
 </tr>
-<tr class="row-even"><td>COGS</td>
+<tr class="row-odd"><td>COGS</td>
 <td>1,300,000</td>
 <td>585,000 = Purchases for Sep, Oct, Nov</td>
 </tr>
-<tr class="row-odd"><td>Other</td>
+<tr class="row-even"><td>Other</td>
 <td>540,000</td>
 <td>180,000</td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td>EBITDA</td>
+<tr class="row-even"><td>EBITDA</td>
 <td>160,000</td>
 <td>135,000</td>
 </tr>
-<tr class="row-even"><td>Dep</td>
+<tr class="row-odd"><td>Dep</td>
 <td>30,000*</td>
 <td>17,700</td>
-</tr>
-<tr class="row-odd"><td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-even"><td>EBIT</td>
-<td>130,000</td>
-<td>17,300</td>
-</tr>
-<tr class="row-odd"><td>Interest</td>
-<td>30,000*</td>
-<td>13,373</td>
 </tr>
 <tr class="row-even"><td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td>EBT</td>
-<td>100,000</td>
-<td>103,927</td>
+<tr class="row-odd"><td>EBIT</td>
+<td>130,000</td>
+<td>17,300</td>
 </tr>
-<tr class="row-even"><td>Taxes</td>
-<td>33,000</td>
-<td>34,296</td>
+<tr class="row-even"><td>Interest</td>
+<td>30,000*</td>
+<td>13,373</td>
 </tr>
 <tr class="row-odd"><td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td>NetInc</td>
+<tr class="row-even"><td>EBT</td>
+<td>100,000</td>
+<td>103,927</td>
+</tr>
+<tr class="row-odd"><td>Taxes</td>
+<td>33,000</td>
+<td>34,296</td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td>NetInc</td>
 <td>67,000</td>
 <td>69,631</td>
 </tr>
 </tbody>
 </table>
+<p>* this was given</p>
 <p>Total NFA = Initial NFA + added NFA = 250,000 + 340,000 = 590,000
 Dep = 0.03 * Total NFA = 0.03 * 590,000 = 17,700</p>
-<ul class="simple">
-<li>: given</li>
-</ul>
 <table border="1" class="docutils">
 <colgroup>
 <col width="15%" />
@@ -485,30 +477,35 @@ Misc Accruals</p>
 </tr>
 </tbody>
 </table>
-<dl class="docutils">
-<dt>Inv_Dec31   &amp;= Purchases_Oct + Purchases_Nov + Purchase_Dec ??</dt>
-<dd>&amp;= 600,000 + 555000 - 585000
-&amp;= 570000</dd>
-<dt>NFA_Dec31   &amp;= 250000 + 340000 - 17700</dt>
-<dd>&amp;= 572300</dd>
-<dt>AP_Sep30    = Purchases Over the last 60 days</dt>
-<dd>= Purchase_Aug + Purchase_Sep</dd>
-<dt>CurrLTD_Sep30   &amp;= Principal Payments for the previous 12 months</dt>
-<dd>&amp;= Princ_Oct + Princ_Nov + Princ_Dec + Princ_Q1 + Princ_Q2 + Princ_Q3</dd>
-</dl>
-<p>CurrLTD_Dec31   &amp;= Princ_Q1 + Princ_Q2 + Princ_Q3 + Princ_Q4</p>
-<dl class="docutils">
-<dt>TaxPayable_Dec31    &amp;= TaxPayable_Sep30 - TaxPayment_Dec30 + Taxes Accrued Last Year</dt>
-<dd>&amp;= 100000 - 65000 + 34296</dd>
-</dl>
-<p>Equity_Sep30 = Sep30 - All other stuff</p>
-<dl class="docutils">
-<dt>Equity_Dec31    = Sep30 - All other stuff</dt>
-<dd>= 451000 + RE
-= 451000 + (Net Income - Dividends)
-= 451000 + (Net Income - 20000)
-= 1562300</dd>
-</dl>
+<ul class="simple">
+<li>: given</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}Inv_{Dec31} &amp;= Purchases_{Oct} + Purchases_{Nov} + Purchases_{Dec} ?? \\
+            &amp;= 600,000 + 555000 - 585000 \\
+            &amp;= 570000\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}NFA_{Dec31} &amp;= 250000 + 340000 - 17700 \\
+            &amp;= 572300\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}AP_{Sep30}  &amp;= Purchases Over The Last 60 Days \\
+            &amp;= Purchases_{Aug} + Purchases_{Sep}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}CurrLTD_{Sep30} &amp;= Principal Payments For The Previous 12 Months \\
+                &amp;= Princ_{Oct} + Princ_{Nov} + Princ_{Dec} + Princ_{Q1} + Princ_{Q2} + Princ_{Q3}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[CurrLTD_{Dec31} = Princ_{Q1} + Princ_{Q2} + Princ_{Q3} + Princ_{Q4}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}TaxPayable_{Dec31}  &amp;= TaxPayable_{Sep30} - TaxPayment_{Dec30} + Taxes Accrued Last Year \\
+                    &amp;= 100000 - 65000 + 34296\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[Equity_{Sep30} = Sep30 - All Other Stuff\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}Equity_{Dec31}  &amp;= Sep30 - All Other Stuff \\
+                &amp;= 451000 + RE \\
+                &amp;= 451000 + (Net Income - Dividends) \\
+                &amp;= 451000 + (Net Income - 20000) \\
+                &amp;= 1562300\end{split}\]</div>
 <ul>
 <li><p class="first">what this type of analysis allows you to do</p>
 <blockquote>
@@ -531,38 +528,66 @@ Misc Accruals</p>
 <li>run inventory down: buy less inventory, burn through your current inventory</li>
 <li>go to tax man and say “can we delay payment”</li>
 <li>cut the dividend</li>
-<li></li>
 </ul>
 </div></blockquote>
 </li>
 </ul>
 </div></blockquote>
 </li>
-</ul>
-<ul class="simple">
-<li>: given</li>
 </ul>
 </div>
 </div>
 <div class="section" id="new-example">
 <h2>New Example<a class="headerlink" href="#new-example" title="Permalink to this headline">¶</a></h2>
-<ul>
-<li><p class="first">Pay 40 days later</p>
-<blockquote>
-<div><p>Sep     Oct     Nov     Dec</p>
-</div></blockquote>
-</li>
+<ul class="simple">
+<li>Pay 40 days later</li>
 </ul>
-<p>Sales                   100000  200000  300000
-COGS &#64; 50%      50000   100000  150000</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"></th>
+<th class="head">Sep</th>
+<th class="head">Oct</th>
+<th class="head">Nov</th>
+<th class="head">Dec</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Sales</td>
+<td>&#160;</td>
+<td>100000</td>
+<td>200000</td>
+<td>300000</td>
+</tr>
+<tr class="row-odd"><td>COGS &#64; 50%</td>
+<td>50000</td>
+<td>100000</td>
+<td>150000</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
 <img alt="weird_payment_graph" src="weird_payment_graph" />
+<ul class="simple">
+<li>assuming 30 days/month</li>
+</ul>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}Payments in November    &amp;= Purchases Made in September to be paid in November + Purchases Made in October to be paid in November
-                        &amp;= Purchases from Sep20 to Sep30 + Purchases from Oct1 to Oct20
-                        &amp;= Purchases for 10 days in September + Purchase for 20 days in October
-                        &amp;= PP_S + PP_O
-                        &amp;= 10/30*50 + 20/30*100\\Purchase Portion    &amp;= PP
-                    &amp;= Days Accounted For/Total Days In Month * Purchases For Month\\- assuming 30 days/month\end{aligned}\end{align} \]</div>
+\[\begin{split}PP  &amp;= Purchase Portion = f(month for which purchases were made, month for which cash is collected for purchases) \\
+    &amp;= f(M_P, M_C) \\
+    &amp;= Days Of Purchases To Be Collected In M_C/Days In M_P * Purchases For M_P \\
+    &amp;= Purchases Made in M_P to be paid in M_C\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}Payments In November    &amp;= Purchases Made in September to be paid in November + Purchases Made in October to be paid in November \\
+                        &amp;= Purchases from Sep20 to Sep30 + Purchases from Oct1 to Oct20 \\
+                        &amp;= Purchases for 10 days in September + Purchase for 20 days in October \\
+                        &amp;= PP_{Sep} + PP_{Oct} \\
+                        &amp;= 10/30*50 + 20/30*100\end{split}\]</div>
 </div>
 </div>
 

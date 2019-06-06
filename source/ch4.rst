@@ -58,7 +58,9 @@ Example Problem
 Principal Repayment Projection
 ``````````````````````````````
 
-Principal Payment = Montly Repayment - Interest Accumulated for Month
+.. math::
+
+    Principal Payment = Montly Repayment - Interest Accumulated for Month
 
 :: 
 
@@ -93,27 +95,24 @@ Cash Projection
     Int Paid LTD                    |-4000     -3983.23
     Princ LTD                       |-1738.84  -
     \               \       \       | \         \           \
-    :math:`\delta` Cash*            |-333,529   2427        -7549
+    :math:`\Delta` Cash*            |-333,529   2427        -7549
     Cash Balance Start              | 221,000   100,000     100,000
     Cash Before Bef Borrow          |-112,529   102,427     92,480
     ST Borrowing                    | 212,529   -2427       7840
     End Cash                221,000 | 100,000   100,000     100,000
     ST Debt                         | 212,529   210,101     217,642
 
-- \delta Cash is the sum of all of the Cash* flow stuff
+\* this is a cash flow
 
-* : this is a cash flow
-
+- :math:`\Delta` Cash is the sum of all of the Cash* flow stuff
 - left some historical stuff blank because we didn't need them for projections
-- wages 
 
 Income Statement
 ````````````````
 
 =========   =====================   =====================================
-            1st 9 Months to Sep30   3 Months to Dec 31
-=========================================================================
-\           \                       \
+\           1st 9 Months to Sep30   3 Months to Dec 31
+=========   =====================   =====================================
 Revenue     2,000,000*              900,000
 COGS        1,300,000               585,000 = Purchases for Sep, Oct, Nov
 Other       540,000                 180,000
@@ -130,11 +129,12 @@ Taxes       33,000                  34,296
 NetInc      67,000                  69,631
 =========   =====================   =====================================
 
+\* this was given
+
 
 Total NFA = Initial NFA + added NFA = 250,000 + 340,000 = 590,000
 Dep = 0.03 * Total NFA = 0.03 * 590,000 = 17,700
 
-* : given
 
 =========   ==========  ==========  =============   ==========  ========
 \           Sep 30      Dec 31      \               Sep 30      Dec 31
@@ -151,31 +151,49 @@ NFA         250000      572300      Equity          451000      1562300
             1123000     1562300                     1231000     1562300
 =========   ==========  ==========  =============   ==========  ========
 
-Inv_Dec31   &= Purchases_Oct + Purchases_Nov + Purchase_Dec ??
-            &= 600,000 + 555000 - 585000
-            &= 570000
+* : given
 
-NFA_Dec31   &= 250000 + 340000 - 17700
-            &= 572300
+.. math:: 
 
-AP_Sep30    = Purchases Over the last 60 days
-            = Purchase_Aug + Purchase_Sep
+    Inv_{Dec31} &= Purchases_{Oct} + Purchases_{Nov} + Purchases_{Dec} ?? \\
+                &= 600,000 + 555000 - 585000 \\
+                &= 570000
 
-CurrLTD_Sep30   &= Principal Payments for the previous 12 months
-                &= Princ_Oct + Princ_Nov + Princ_Dec + Princ_Q1 + Princ_Q2 + Princ_Q3
+.. math:: 
 
-CurrLTD_Dec31   &= Princ_Q1 + Princ_Q2 + Princ_Q3 + Princ_Q4
+    NFA_{Dec31} &= 250000 + 340000 - 17700 \\
+                &= 572300
 
-TaxPayable_Dec31    &= TaxPayable_Sep30 - TaxPayment_Dec30 + Taxes Accrued Last Year
-                    &= 100000 - 65000 + 34296
+.. math:: 
 
-Equity_Sep30 = Sep30 - All other stuff
+    AP_{Sep30}  &= Purchases Over The Last 60 Days \\
+                &= Purchases_{Aug} + Purchases_{Sep}
 
-Equity_Dec31    = Sep30 - All other stuff 
-                = 451000 + RE 
-                = 451000 + (Net Income - Dividends)
-                = 451000 + (Net Income - 20000)
-                = 1562300
+.. math:: 
+
+    CurrLTD_{Sep30} &= Principal Payments For The Previous 12 Months \\
+                    &= Princ_{Oct} + Princ_{Nov} + Princ_{Dec} + Princ_{Q1} + Princ_{Q2} + Princ_{Q3}
+
+.. math:: 
+
+    CurrLTD_{Dec31} = Princ_{Q1} + Princ_{Q2} + Princ_{Q3} + Princ_{Q4}
+
+.. math:: 
+
+    TaxPayable_{Dec31}  &= TaxPayable_{Sep30} - TaxPayment_{Dec30} + Taxes Accrued Last Year \\
+                        &= 100000 - 65000 + 34296
+
+.. math:: 
+
+    Equity_{Sep30} = Sep30 - All Other Stuff
+
+.. math:: 
+
+    Equity_{Dec31}  &= Sep30 - All Other Stuff \\
+                    &= 451000 + RE \\
+                    &= 451000 + (Net Income - Dividends) \\
+                    &= 451000 + (Net Income - 20000) \\
+                    &= 1562300
 
 
 - what this type of analysis allows you to do
@@ -194,33 +212,39 @@ Equity_Dec31    = Sep30 - All other stuff
         - run inventory down: buy less inventory, burn through your current inventory
         - go to tax man and say "can we delay payment"
         - cut the dividend
-        - 
 
-
-* : given
 
 New Example
 -----------
 
 - Pay 40 days later
 
-                Sep     Oct     Nov     Dec
+==============  ======  ======  ======  ======
+\               Sep     Oct     Nov     Dec
+==============  ======  ======  ======  ======
 Sales                   100000  200000  300000
 COGS @ 50%      50000   100000  150000
+==============  ======  ======  ======  ======
 
 
 .. image:: weird_payment_graph
 
+- assuming 30 days/month
+
 .. math:: 
     
-    Payments in November    &= Purchases Made in September to be paid in November + Purchases Made in October to be paid in November
-                            &= Purchases from Sep20 to Sep30 + Purchases from Oct1 to Oct20
-                            &= Purchases for 10 days in September + Purchase for 20 days in October
-                            &= PP_S + PP_O
+    PP  &= Purchase Portion = f(month for which purchases were made, month for which cash is collected for purchases) \\
+        &= f(M_P, M_C) \\
+        &= Days Of Purchases To Be Collected In M_C/Days In M_P * Purchases For M_P \\
+        &= Purchases Made in M_P to be paid in M_C
+
+.. math:: 
+
+    Payments In November    &= Purchases Made in September to be paid in November + Purchases Made in October to be paid in November \\
+                            &= Purchases from Sep20 to Sep30 + Purchases from Oct1 to Oct20 \\
+                            &= Purchases for 10 days in September + Purchase for 20 days in October \\
+                            &= PP_{Sep} + PP_{Oct} \\
                             &= 10/30*50 + 20/30*100
 
-    Purchase Portion    &= PP
-                        &= Days Accounted For/Total Days In Month * Purchases For Month
 
-    - assuming 30 days/month
 
