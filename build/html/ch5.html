@@ -151,16 +151,48 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Taxation and Investment Returns</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#cca">CCA</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cca">CCA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-ucc-over-time">Example: UCC Over Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-terminal-loss-vs-cca-recapture">Example: Terminal Loss vs CCA Recapture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-taxable-income-sources">Example: Taxable Income Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#assignment-4-question-3">Assignment 4, Question 3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#asset-class-x">Asset Class X</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#asset-class-y">Asset Class Y</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#asset-class-z">Asset Class Z</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#another-example">Another Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">Another Example</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ch6.html">The Mathematics of Finance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ch6.html#introduction">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch6.html#present-value-vs-future-value">Present Value vs Future Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch6.html#effective-interest-rates">Effective Interest Rates</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ch6.html#effective-annual-rate">Effective Annual Rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ch6.html#effective-interest-rate-for-1-n-year">Effective Interest Rate For 1/n Year</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ch6.html#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ch6.html#inflation">Inflation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch6.html#perpetuity">Perpetuity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ch6.html#example-1">Example 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ch6.html#example-2">Example 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ch6.html#example-3">Example 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ch6.html#in-general">In general</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ch6.html#annuity">Annuity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ch6.html#id1">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ch6.html#id2">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ch6.html#id3">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ch6.html#steps">Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ch6.html#geometric-growth">Geometric Growth</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ch6.html#growth-perpetuity">growth perpetuity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ch6.html#growth-annuity">growth annuity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ch6.html#id4">Example</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="class_info.html">Class Info</a><ul>
@@ -343,13 +375,13 @@
 </tr>
 </tbody>
 </table>
-<blockquote>
-<div><ul class="simple">
-<li>EBT = Nat Cap Gain * Capital Gains Inclusion Rate</li>
-<li>x_y = recalculation of year x after year y</li>
-<li>x’ = recalculation of year x after recalculation of some previous year</li>
-</ul>
-</div></blockquote>
+<div class="math notranslate nohighlight">
+\[\begin{split}EBT = Net Cap Gain * Capital Gains Inclusion Rate \\
+\\
+where, \\
+\\
+x_y = Recalculation Of Year X After Year Y \\
+x' = Recalculation Of Year X After Recalculation Of Some Previous Year\end{split}\]</div>
 <div class="section" id="cca">
 <h2>CCA<a class="headerlink" href="#cca" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
@@ -370,29 +402,34 @@
 <li><p class="first">If positive, add CCA = half of net additions to UCC and calc CCA</p>
 <blockquote>
 <div><ul class="simple">
-<li>UCC: Undepreciated Capital Cost</li>
+<li><strong>Undepreciated capital cost (UCC)</strong>, the balance of the capital cost left for further depreciation at any given time.</li>
 </ul>
 </div></blockquote>
 </li>
 <li><p class="first">If negative, add the (neg) number to UCC and calculate CCA</p>
 </li>
 </ol>
-<div class="section" id="example">
-<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<p>Starting UCC = 4000
-CCA rate = 50%</p>
-<p>Yr 1:</p>
-<ul class="simple">
-<li>buy an asset for 800</li>
-<li>and sell another for 500 (original cost = 900)</li>
-</ul>
-<p>Yr 2: nothing</p>
-<p>Yr 3:</p>
-<ul class="simple">
-<li>buy an asset for 400</li>
-<li>and sell another for 800 (original cost = 500)</li>
-</ul>
-<p>Yr 4: nothing</p>
+</div>
+<div class="section" id="example-ucc-over-time">
+<h2>Example: UCC Over Time<a class="headerlink" href="#example-ucc-over-time" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Starting</span> <span class="n">UCC</span> <span class="o">=</span> <span class="mi">4000</span>
+<span class="n">CCA</span> <span class="n">rate</span> <span class="o">=</span> <span class="mi">50</span><span class="o">%</span>
+
+<span class="n">Yr</span> <span class="mi">1</span><span class="p">:</span>
+
+<span class="o">-</span> <span class="n">buy</span> <span class="n">an</span> <span class="n">asset</span> <span class="k">for</span> <span class="mi">800</span>
+<span class="o">-</span> <span class="ow">and</span> <span class="n">sell</span> <span class="n">another</span> <span class="k">for</span> <span class="mi">500</span> <span class="p">(</span><span class="n">original</span> <span class="n">cost</span> <span class="o">=</span> <span class="mi">900</span><span class="p">)</span>
+
+<span class="n">Yr</span> <span class="mi">2</span><span class="p">:</span> <span class="n">nothing</span>
+
+<span class="n">Yr</span> <span class="mi">3</span><span class="p">:</span>
+
+<span class="o">-</span> <span class="n">buy</span> <span class="n">an</span> <span class="n">asset</span> <span class="k">for</span> <span class="mi">400</span>
+<span class="o">-</span> <span class="ow">and</span> <span class="n">sell</span> <span class="n">another</span> <span class="k">for</span> <span class="mi">800</span> <span class="p">(</span><span class="n">original</span> <span class="n">cost</span> <span class="o">=</span> <span class="mi">500</span><span class="p">)</span>
+
+<span class="n">Yr</span> <span class="mi">4</span><span class="p">:</span> <span class="n">nothing</span>
+</pre></div>
+</div>
 <table border="1" class="docutils">
 <colgroup>
 <col width="12%" />
@@ -463,81 +500,172 @@ CCA rate = 50%</p>
                 = (1112.5 - 100) - 506.25 \\
                 = 506.25\end{split}\]</div>
 </div>
-</div>
-<div class="section" id="another-example">
-<h2>Another Example<a class="headerlink" href="#another-example" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-terminal-loss-vs-cca-recapture">
+<h2>Example: Terminal Loss vs CCA Recapture<a class="headerlink" href="#example-terminal-loss-vs-cca-recapture" title="Permalink to this headline">¶</a></h2>
 <p>Buy a vehicle for 80000</p>
 <blockquote>
-<div><p><span class="math notranslate nohighlight">\(\net CCA = 50000\)</span></p>
-<blockquote>
-<div>Scenario 1              Scenario 2
-—–                   ——</div></blockquote>
-</div></blockquote>
-<p>UCC =           30000
-Sell for        20000                   40000</p>
-<blockquote>
-<div>—–                   ——
-10000                   -10000</div></blockquote>
-<dl class="docutils">
-<dt>Terminal Loss   10000   CCA Recapture   10000</dt>
-<dd>—–                   ——
-0                       0</dd>
-</dl>
+<div><span class="math notranslate nohighlight">\(\Sigma CCA = 50000\)</span></div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="28%" />
+<col width="22%" />
+<col width="28%" />
+<col width="22%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"></th>
+<th class="head">Scenario 1</th>
+<th class="head"></th>
+<th class="head">Scenario 2</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>UCC =</td>
+<td>30000</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td>Sell for</td>
+<td>20000</td>
+<td>&#160;</td>
+<td>40000</td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td>10000</td>
+<td></td>
+<td>-10000</td>
+</tr>
+<tr class="row-even"><td>Terminal Loss</td>
+<td>10000</td>
+<td>CCA Recapture</td>
+<td>10000</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td>0</td>
+<td></td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
 <p>Loss of value = 80000-20000=60000</p>
-<p>Terminal loss ~ (can be thought of extra CCA)</p>
+<ul>
+<li><p class="first"><strong>Terminal loss</strong>, can be thought of extra CCA</p>
 <blockquote>
 <div><ul class="simple">
 <li>only occurs if balance is positive and the last asset is sold</li>
 </ul>
 </div></blockquote>
-<p>CCA Recapture ~ “we, the CRA, gave you too much CCA in past and now we’re reclaiming taxable income”</p>
+</li>
+<li><p class="first"><strong>CCA Recapture</strong>, “we, the CRA, gave you too much CCA in past and now we’re reclaiming taxable income”</p>
 <blockquote>
 <div><ul class="simple">
 <li>only whenever the balance goes negative</li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="id1">
-<h2>Another Example<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>some examples of taxable income</li>
+</li>
 </ul>
-<p>Salary                  Directly
+</div>
+<div class="section" id="example-taxable-income-sources">
+<h2>Example: Taxable Income Sources<a class="headerlink" href="#example-taxable-income-sources" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Salary                  Directly
 +- Alimony              Directly
 - RRSP contribution     Directly
 + Interest received     Directly
 + Capital gains         * 0.5
 + Canadian Divs         Gross up by 40% (increase?)
-+ Non Canadian Divs     Directly</p>
-<p>Salary                      60000
++ Non Canadian Divs     Directly
+
+Salary                      60000
 Interest                    20000
 Capital gain    60000 -&gt;    30000
 Can Divs        10000 -&gt;    14000
-Non Can Divs                40000</p>
-<blockquote>
-<div></div></blockquote>
-<p>Taxable Income              110000
+Non Can Divs                40000
+                            -------
+Taxable Income              110000
 Net Federal Tax (b)         18100
-Net Provincial Tax (given)  17000</p>
-<blockquote>
-<div></div></blockquote>
-<p>Net Income                  74900</p>
-<p>(a)
-Fed Tax
-0 - 40000   15%     6000
-40k-80000   22%     8800
-80k-120k    26%     7800
-&gt; 120k      29%</p>
-<blockquote>
-<div></div></blockquote>
-<p>Tax paid            22600</p>
-<p>(b)
-Basic Fed Tax               22600 (a)
-Basic Personal Tax Cr       -1500 (given)
-Div Tax Cr (30% of div)     -3000</p>
-<blockquote>
-<div></div></blockquote>
-<p>Net Federal Tax             18100</p>
+Net Provincial Tax (given)  17000
+                            -------
+Net Income                  74900
+</pre></div>
+</div>
+<ol class="loweralpha simple">
+<li></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fed</span> <span class="n">Tax</span>
+<span class="mi">0</span> <span class="o">-</span> <span class="mi">40000</span>   <span class="mi">15</span><span class="o">%</span>     <span class="mi">6000</span>
+<span class="mi">40</span><span class="n">k</span><span class="o">-</span><span class="mi">80000</span>   <span class="mi">22</span><span class="o">%</span>     <span class="mi">8800</span>
+<span class="mi">80</span><span class="n">k</span><span class="o">-</span><span class="mi">120</span><span class="n">k</span>    <span class="mi">26</span><span class="o">%</span>     <span class="mi">7800</span>
+<span class="o">&gt;</span> <span class="mi">120</span><span class="n">k</span>      <span class="mi">29</span><span class="o">%</span>
+                    <span class="o">-----</span>
+<span class="n">Tax</span> <span class="n">paid</span>            <span class="mi">22600</span>
+</pre></div>
+</div>
+<ol class="loweralpha simple" start="2">
+<li></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Basic</span> <span class="n">Fed</span> <span class="n">Tax</span>               <span class="mi">22600</span> <span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">Basic</span> <span class="n">Personal</span> <span class="n">Tax</span> <span class="n">Cr</span>       <span class="o">-</span><span class="mi">1500</span> <span class="p">(</span><span class="n">given</span><span class="p">)</span>
+<span class="n">Div</span> <span class="n">Tax</span> <span class="n">Cr</span> <span class="p">(</span><span class="mi">30</span><span class="o">%</span> <span class="n">of</span> <span class="n">div</span><span class="p">)</span>     <span class="o">-</span><span class="mi">3000</span>
+                            <span class="o">-------</span>
+<span class="n">Net</span> <span class="n">Federal</span> <span class="n">Tax</span>             <span class="mi">18100</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="assignment-4-question-3">
+<h2>Assignment 4, Question 3<a class="headerlink" href="#assignment-4-question-3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="asset-class-x">
+<h3>Asset Class X<a class="headerlink" href="#asset-class-x" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>UCC =               32000
+Capital Loss (?)    -45000
+                    ------
+                    -13000
+
+CCA recapture       13000
+    is added to earnings
+</pre></div>
+</div>
+</div>
+<div class="section" id="asset-class-y">
+<h3>Asset Class Y<a class="headerlink" href="#asset-class-y" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Suppose</span>
+<span class="n">Asset</span> <span class="n">Bought</span> <span class="k">for</span>    <span class="mi">20000</span>
+<span class="n">Sold</span> <span class="k">for</span>            <span class="mi">50000</span>
+
+<span class="n">Therefore</span>
+<span class="n">Capital</span> <span class="n">Gain</span>        <span class="mi">30000</span>   <span class="p">(</span><span class="n">add</span> <span class="mi">15</span><span class="o">%</span> <span class="n">to</span> <span class="n">earnings</span> <span class="n">b</span><span class="o">/</span><span class="n">c</span> <span class="n">inclusion</span> <span class="n">rate</span><span class="p">)</span>
+<span class="n">UCC</span> <span class="n">Loss</span> <span class="n">of</span>         <span class="o">-</span><span class="mi">20000</span>
+
+
+<span class="n">UCC</span>             <span class="mi">67000</span>
+                <span class="o">-</span><span class="mi">20000</span>
+                <span class="o">-------</span>
+                <span class="mi">470000</span>
+<span class="n">Terminal</span> <span class="n">Loss</span>   <span class="mi">470000</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="asset-class-z">
+<h3>Asset Class Z<a class="headerlink" href="#asset-class-z" title="Permalink to this headline">¶</a></h3>
+<p>UCC         150000</p>
+<p>Old Asset is Sold Off</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}Z   &amp;= net additions \\
+    &amp;= 80000 - 25000 \\
+    &amp;= 55000\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[CCA = 0.4 * (150000 + 0.5 * 55000)\]</div>
+<p>is subtracted from earnings</p>
+</div>
 </div>
 </div>
 

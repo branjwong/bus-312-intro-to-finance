@@ -28,10 +28,14 @@ EBT             500     200                                                     
 Tax 40%         200     80                                      -120            -80                                         280
 ============    =====   =============== =============== ====    ====    =====   ====    ================    ====    ====    ====
 
+.. math::
 
-    - EBT = Nat Cap Gain * Capital Gains Inclusion Rate
-    - x_y = recalculation of year x after year y
-    - x' = recalculation of year x after recalculation of some previous year
+    EBT = Net Cap Gain * Capital Gains Inclusion Rate \\
+    \\
+    where, \\
+    \\ 
+    x_y = Recalculation Of Year X After Year Y \\
+    x' = Recalculation Of Year X After Recalculation Of Some Previous Year
 
 CCA
 ---
@@ -45,30 +49,32 @@ CCA
 
 2. If positive, add CCA = half of net additions to UCC and calc CCA
 
-    - UCC: Undepreciated Capital Cost
+    - **Undepreciated capital cost (UCC)**, the balance of the capital cost left for further depreciation at any given time.
 
 3. If negative, add the (neg) number to UCC and calculate CCA
 
 
-Example
-```````
+Example: UCC Over Time
+----------------------
 
-Starting UCC = 4000
-CCA rate = 50%
+:: 
 
-Yr 1:
+    Starting UCC = 4000
+    CCA rate = 50%
 
-- buy an asset for 800
-- and sell another for 500 (original cost = 900)
+    Yr 1:
 
-Yr 2: nothing
+    - buy an asset for 800
+    - and sell another for 500 (original cost = 900)
 
-Yr 3: 
+    Yr 2: nothing
 
-- buy an asset for 400
-- and sell another for 800 (original cost = 500)
+    Yr 3: 
 
-Yr 4: nothing
+    - buy an asset for 400
+    - and sell another for 800 (original cost = 500)
+
+    Yr 4: nothing
 
 ======  =========   ==============  ==========  ===========
 Year    Start UCC   Net additions   CCA         End UCC
@@ -121,76 +127,142 @@ Year    Start UCC   Net additions   CCA         End UCC
                     = (1112.5 - 100) - 506.25 \\
                     = 506.25
 
-Another Example
----------------
+Example: Terminal Loss vs CCA Recapture
+---------------------------------------
 
 Buy a vehicle for 80000
 
-        :math:`\net CCA = 50000`
+    :math:`\Sigma CCA = 50000`
 
-
-                Scenario 1              Scenario 2
-                -----                   ------
-UCC =           30000   
-Sell for        20000                   40000
-                -----                   ------
-                10000                   -10000
-Terminal Loss   10000   CCA Recapture   10000
-                -----                   ------
-                0                       0
+=============   ==========  =============   ==========
+\               Scenario 1  \               Scenario 2
+=============   ==========  =============   ==========
+UCC =           30000       \               \
+Sell for        20000                       40000
+\               \           \               \
+\               10000       \               -10000
+Terminal Loss   10000       CCA Recapture   10000
+\               \           \               \
+\               0           \               0
+=============   ==========  =============   ==========
 
 Loss of value = 80000-20000=60000
 
-Terminal loss ~ (can be thought of extra CCA)
+- **Terminal loss**, can be thought of extra CCA
 
     - only occurs if balance is positive and the last asset is sold
 
-CCA Recapture ~ "we, the CRA, gave you too much CCA in past and now we're reclaiming taxable income"
+- **CCA Recapture**, "we, the CRA, gave you too much CCA in past and now we're reclaiming taxable income"
 
     - only whenever the balance goes negative
 
 
-Another Example
----------------
+Example: Taxable Income Sources
+-------------------------------
 
-- some examples of taxable income
+::
 
-Salary                  Directly
-+- Alimony              Directly
-- RRSP contribution     Directly
-+ Interest received     Directly
-+ Capital gains         * 0.5
-+ Canadian Divs         Gross up by 40% (increase?)
-+ Non Canadian Divs     Directly
+    Salary                  Directly
+    +- Alimony              Directly
+    - RRSP contribution     Directly
+    + Interest received     Directly
+    + Capital gains         * 0.5
+    + Canadian Divs         Gross up by 40% (increase?)
+    + Non Canadian Divs     Directly
 
-Salary                      60000
-Interest                    20000
-Capital gain    60000 ->    30000
-Can Divs        10000 ->    14000
-Non Can Divs                40000
-                            -------
-Taxable Income              110000
-Net Federal Tax (b)         18100
-Net Provincial Tax (given)  17000
-                            -------
-Net Income                  74900
+    Salary                      60000
+    Interest                    20000
+    Capital gain    60000 ->    30000
+    Can Divs        10000 ->    14000
+    Non Can Divs                40000
+                                -------
+    Taxable Income              110000
+    Net Federal Tax (b)         18100
+    Net Provincial Tax (given)  17000
+                                -------
+    Net Income                  74900
 
 
 (a)
-Fed Tax
-0 - 40000   15%     6000
-40k-80000   22%     8800
-80k-120k    26%     7800
-> 120k      29%
-                    -----
-Tax paid            22600
+
+:: 
+
+    Fed Tax
+    0 - 40000   15%     6000
+    40k-80000   22%     8800
+    80k-120k    26%     7800
+    > 120k      29%
+                        -----
+    Tax paid            22600
 
 
 (b)
-Basic Fed Tax               22600 (a)
-Basic Personal Tax Cr       -1500 (given)
-Div Tax Cr (30% of div)     -3000
-                            -------
-Net Federal Tax             18100
+
+:: 
+
+    Basic Fed Tax               22600 (a)
+    Basic Personal Tax Cr       -1500 (given)
+    Div Tax Cr (30% of div)     -3000
+                                -------
+    Net Federal Tax             18100
+
+
+Assignment 4, Question 3
+------------------------
+
+
+Asset Class X 
+``````````````
+
+::
+
+    UCC =               32000
+    Capital Loss (?)    -45000
+                        ------
+                        -13000
+
+    CCA recapture       13000
+        is added to earnings
+
+Asset Class Y
+``````````````
+::
+
+    Suppose
+    Asset Bought for    20000
+    Sold for            50000
+
+    Therefore
+    Capital Gain        30000   (add 15% to earnings b/c inclusion rate)
+    UCC Loss of         -20000
+
+
+    UCC             67000
+                    -20000
+                    -------
+                    470000
+    Terminal Loss   470000
+
+
+Asset Class Z
+``````````````
+
+UCC         150000
+
+Old Asset is Sold Off
+
+.. math::
+
+    Z   &= net additions \\
+        &= 80000 - 25000 \\
+        &= 55000
+
+.. math::
+
+    CCA = 0.4 * (150000 + 0.5 * 55000)
+
+is subtracted from earnings
+
+
 
 

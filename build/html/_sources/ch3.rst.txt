@@ -33,7 +33,7 @@ Degree Of Operating Leverage (DOL)
 
 .. math:: 
 
-    DOL = Percent Change In EBITDA + Percent Change in Sales
+    DOL = \frac {Percent Change In EBITDA} {Percent Change in Sales}
 
 .. admonition:: Derivation of DOL
 
@@ -68,7 +68,7 @@ Contirbution Margin
 
     S - VC = Units Sold * \frac {Contribution Margin (CM)} {Unit} \\
     \\
-    DOL = \frac {\frac {CM} {Unit} * Unit Sales} {\frac {CM} {Unit} * Unit Sales - FC}
+    DOL = \frac {Unit Sales * \frac {CM} {Unit}} {Unit Sales * \frac {CM} {Unit} - FC}
 
 also 
 
@@ -76,7 +76,7 @@ also
 
     S - VC = Sales * \frac {Contribution Margin (CM)} {$} \\
     \\
-    DOL = \frac {\frac {CM} {$} * Sales} {\frac {CM} {$} * Sales - FC}
+    DOL = \frac {Sales * \frac {CM} {$}} {Sales * \frac {CM} {$} - FC}
 
 
 How DOL Affects EBITDA
