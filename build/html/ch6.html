@@ -175,29 +175,32 @@
 <li class="toctree-l2"><a class="reference internal" href="#inflation">Inflation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#perpetuity">Perpetuity</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#example-basic-perpetuity">Example: Basic Perpetuity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#example-2-pv-from-different-time-perspective">Example 2: PV From Different Time Perspective</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-2-displaced-perpetuity">Example 2: Displaced Perpetuity</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#method-1">Method 1</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#method-2">Method 2</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#example-pv-from-different-fractional-time-perspective">Example: PV From Different Fractional Time Perspective</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#generalization-pv-from-different-fractional-time-perspective">Generalization: PV From Different Fractional Time Perspective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-fractionally-displaced-perpetuity">Example: Fractionally Displaced Perpetuity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#generalization-displaced-pv">Generalization: Displaced PV</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#annuity">Annuity</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id1">Example</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id2">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-basic-annuity">Example: Basic Annuity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-displaced-annuity">Example: Displaced Annuity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-displaced-annuity-2">Example: Displaced Annuity 2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#steps">Steps</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#geometric-growth">Geometric Growth</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#growth-perpetuity">Growth Perpetuity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#growth-annuity">Growth Annuity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">Example</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#assignment-question-8">Assignment Question 8</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#assignment-question-9">Assignment Question 9</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#assignment-question-3">Assignment Question 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-retirement-savings-plan">Example: Retirement Savings Plan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#assignment-questions">Assignment Questions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#question-8">Question 8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#question-9">Question 9</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#question-3">Question 3</a></li>
 </ul>
 </li>
 </ul>
@@ -502,8 +505,8 @@ C = $1000 p.a, starting at t=1
                 &amp;= \frac {1000} {0.01} \\
                 &amp;= 10000\end{split}\]</div>
 </div>
-<div class="section" id="example-2-pv-from-different-time-perspective">
-<h3>Example 2: PV From Different Time Perspective<a class="headerlink" href="#example-2-pv-from-different-time-perspective" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-2-displaced-perpetuity">
+<h3>Example 2: Displaced Perpetuity<a class="headerlink" href="#example-2-displaced-perpetuity" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>r = 10%,
 C = $1000 p.a, starting at t=0
 </pre></div>
@@ -523,8 +526,8 @@ PV_{t \geq 0}   &amp;= PV_{t \geq -1} * (1 + r) \\
                 &amp;= 10000\end{split}\]</div>
 </div>
 </div>
-<div class="section" id="example-pv-from-different-fractional-time-perspective">
-<h3>Example: PV From Different Fractional Time Perspective<a class="headerlink" href="#example-pv-from-different-fractional-time-perspective" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-fractionally-displaced-perpetuity">
+<h3>Example: Fractionally Displaced Perpetuity<a class="headerlink" href="#example-fractionally-displaced-perpetuity" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>r = 10%,
 C = $1000 p.a, starting at t=0.5
 </pre></div>
@@ -535,8 +538,8 @@ C = $1000 p.a, starting at t=0.5
 PV_{t \geq 0}   &amp;= PV_{t \geq -0.5} * (1 + r)^{0.5} \\
                 &amp;= \frac {1000} {0.1} * (1 + 0.1)^{0.5}\end{split}\]</div>
 </div>
-<div class="section" id="generalization-pv-from-different-fractional-time-perspective">
-<h3>Generalization: PV From Different Fractional Time Perspective<a class="headerlink" href="#generalization-pv-from-different-fractional-time-perspective" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="generalization-displaced-pv">
+<h3>Generalization: Displaced PV<a class="headerlink" href="#generalization-displaced-pv" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}PV_{t \geq -n}      &amp;= \frac {C} {r}, n &gt; 0 \\
 =&gt; PV_{t \geq 0}    &amp;= PV_{t \geq -n} * (1 + r)^n\end{split}\]</div>
@@ -568,8 +571,8 @@ PV_{t \geq 0}   &amp;= PV_{t \geq -0.5} * (1 + r)^{0.5} \\
 where, \\
 \\
 n = \text{number of cash flow periods}\end{split}\]</div>
-<div class="section" id="example">
-<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-basic-annuity">
+<h3>Example: Basic Annuity<a class="headerlink" href="#example-basic-annuity" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">10</span><span class="o">%</span>
 <span class="n">Annual</span> <span class="n">cash</span> <span class="n">flows</span> <span class="n">starting</span> <span class="ow">in</span> <span class="mi">1</span> <span class="n">yr</span>
 <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
@@ -580,8 +583,8 @@ n = \text{number of cash flow periods}\end{split}\]</div>
     &amp;= \frac 1000 0.1 * (1 - \frac 1 {1.1^{20}}) \\
     &amp;= 8513\end{split}\]</div>
 </div>
-<div class="section" id="id1">
-<h3>Example<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-displaced-annuity">
+<h3>Example: Displaced Annuity<a class="headerlink" href="#example-displaced-annuity" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">10</span><span class="o">%</span>
 <span class="n">Annual</span> <span class="n">cash</span> <span class="n">flows</span> <span class="n">starting</span> <span class="n">today</span>
 <span class="n">Last</span> <span class="n">cash</span> <span class="n">flow</span> <span class="ow">in</span> <span class="mi">20</span> <span class="n">years</span>
@@ -592,8 +595,8 @@ n = \text{number of cash flow periods}\end{split}\]</div>
     &amp;= \frac {1000} {0.1} * (1 - \frac 1 {1.1^{21}}) * 1.1 \\
     &amp;= 9513.56\end{split}\]</div>
 </div>
-<div class="section" id="id2">
-<h3>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-displaced-annuity-2">
+<h3>Example: Displaced Annuity 2<a class="headerlink" href="#example-displaced-annuity-2" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>What is the value today of a policy that pays $1000 a year.
 20 cash flows.
 1st cash flow in 5 year.
@@ -637,8 +640,8 @@ r = 10%
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}PV = \frac C {r-g} * (1-(\frac {1+g} {1+r})^n)\\\text {as } n \rightarrow \infty , (\frac {1+g} {1+r})^n \rightarrow 0 , \text{ and } PV = \frac C {r-g}\end{aligned}\end{align} \]</div>
 </div>
-<div class="section" id="id3">
-<h3>Example<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-retirement-savings-plan">
+<h3>Example: Retirement Savings Plan<a class="headerlink" href="#example-retirement-savings-plan" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>r = 10%
 Today birthday t=20
 Deposit starting one year
@@ -661,8 +664,11 @@ how much must you deposit each year?
 <div class="math notranslate nohighlight">
 \[C_{deposit} = \text{how much we must deposit each year}\]</div>
 </div>
-<div class="section" id="assignment-question-8">
-<h3>Assignment Question 8<a class="headerlink" href="#assignment-question-8" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="assignment-questions">
+<h2>Assignment Questions<a class="headerlink" href="#assignment-questions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="question-8">
+<h3>Question 8<a class="headerlink" href="#question-8" title="Permalink to this headline">¶</a></h3>
 <img alt="sometng" src="sometng" />
 <div class="math notranslate nohighlight">
 \[\text{eff q rate} = \frac {0.08} 4 = 0.02\]</div>
@@ -677,8 +683,8 @@ how much must you deposit each year?
 PV_\text{bank acc today t=0} &amp;= PV_\text{withdrawls from today PT1} + PV_\text{withdrawls from today PT2} \\
 50057 &amp;= [2C + \frac {2C} {0.035} * (1 - \frac 1 {1.035^5})] + [\frac C {0.035} * (1 - \frac 1 {1.035^6}) * \frac 1 {1.035^5}]\end{split}\]</div>
 </div>
-<div class="section" id="assignment-question-9">
-<h3>Assignment Question 9<a class="headerlink" href="#assignment-question-9" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="question-9">
+<h3>Question 9<a class="headerlink" href="#question-9" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}EAR = 10\%, EAR = e^q - 1 \\\end{split}\]</div>
 <div class="math notranslate nohighlight">
@@ -690,8 +696,8 @@ cont comp r = ln 1.1\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[eff m rate = (1+0.10)^{\frac 1 {12}} - 1\]</div>
 </div>
-<div class="section" id="assignment-question-3">
-<h3>Assignment Question 3<a class="headerlink" href="#assignment-question-3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="question-3">
+<h3>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight">
 \[Borrow $10000, r = 20\%
 Int = 2000/12000 \rightarrow $1000/month \text{in interest payments}\]</div>

@@ -18,10 +18,6 @@ Welcome to BUS 312 Introduction To Finance's documentation!
     ch6
     class_info
 
+.. |date| date::
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+This document was last generated on |date|.

@@ -200,7 +200,7 @@ Suppose cash flow every period = C
     PV = \frac {C} {r}
 
 Example: Basic Perpetuity
-```````````````````````````
+`````````````````````````
 
 ::
 
@@ -213,8 +213,8 @@ Example: Basic Perpetuity
                     &= \frac {1000} {0.01} \\
                     &= 10000 
 
-Example 2: PV From Different Time Perspective 
-`````````````````````````````````````````````````
+Example 2: Displaced Perpetuity
+```````````````````````````````
 
 :: 
 
@@ -240,8 +240,8 @@ Method 2
                     &= 10000
 
 
-Example: PV From Different Fractional Time Perspective
-``````````````````````````````````````````````````````
+Example: Fractionally Displaced Perpetuity
+``````````````````````````````````````````
 
 ::
 
@@ -256,8 +256,8 @@ Example: PV From Different Fractional Time Perspective
                     &= \frac {1000} {0.1} * (1 + 0.1)^{0.5} 
 
 
-Generalization: PV From Different Fractional Time Perspective
-`````````````````````````````````````````````````````````````
+Generalization: Displaced PV
+````````````````````````````
 
 .. math::
 
@@ -290,8 +290,8 @@ Annuity
     \\
     n = \text{number of cash flow periods}
 
-Example
-```````
+Example: Basic Annuity
+``````````````````````
 
 ::
 
@@ -306,8 +306,8 @@ Example
         &= 8513
 
 
-Example
-```````
+Example: Displaced Annuity
+``````````````````````````
 
 :: 
 
@@ -322,8 +322,8 @@ Example
         &= 9513.56
 
 
-Example
-```````
+Example: Displaced Annuity 2
+````````````````````````````
 
 ::
 
@@ -377,8 +377,9 @@ Growth Annuity
 
     \text {as } n \rightarrow \infty , (\frac {1+g} {1+r})^n \rightarrow 0 , \text{ and } PV = \frac C {r-g}
 
-Example
-```````
+
+Example: Retirement Savings Plan
+````````````````````````````````
 
 ::
 
@@ -410,8 +411,11 @@ Example
     C_{deposit} = \text{how much we must deposit each year}
 
 
-Assignment Question 8
-`````````````````````
+Assignment Questions
+--------------------
+
+Question 8
+``````````
 
 .. image:: sometng
 
@@ -436,10 +440,8 @@ Assignment Question 8
     50057 &= [2C + \frac {2C} {0.035} * (1 - \frac 1 {1.035^5})] + [\frac C {0.035} * (1 - \frac 1 {1.035^6}) * \frac 1 {1.035^5}] 
 
 
-
-
-Assignment Question 9
-`````````````````````
+Question 9
+``````````
 
 .. math:: 
 
@@ -457,8 +459,8 @@ Assignment Question 9
 
     eff m rate = (1+0.10)^{\frac 1 {12}} - 1
 
-Assignment Question 3
-`````````````````````
+Question 3
+``````````
 
 .. math:: 
 
