@@ -167,30 +167,37 @@
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#present-value-vs-future-value">Present Value vs Future Value</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#effective-interest-rates">Effective Interest Rates</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#effective-annual-rate">Effective Annual Rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-basic-effective-annual-rate">Example: Basic Effective Annual Rate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#effective-interest-rate-for-1-n-year">Effective Interest Rate For 1/n Year</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-converting-between-rates">Example: Converting Between Rates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#inflation">Inflation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#perpetuity">Perpetuity</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#example-1">Example 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#example-2">Example 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#example-3">Example 3</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#in-general">In general</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-basic-perpetuity">Example: Basic Perpetuity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-2-pv-from-different-time-perspective">Example 2: PV From Different Time Perspective</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#method-1">Method 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#method-2">Method 2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#example-pv-from-different-fractional-time-perspective">Example: PV From Different Fractional Time Perspective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#generalization-pv-from-different-fractional-time-perspective">Generalization: PV From Different Fractional Time Perspective</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#annuity">Annuity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id1">Example</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id2">Example</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">Example</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#steps">Steps</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#geometric-growth">Geometric Growth</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#growth-perpetuity">growth perpetuity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#growth-annuity">growth annuity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#growth-perpetuity">Growth Perpetuity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#growth-annuity">Growth Annuity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#assignment-question-8">Assignment Question 8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#assignment-question-9">Assignment Question 9</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#assignment-question-3">Assignment Question 3</a></li>
 </ul>
 </li>
 </ul>
@@ -315,21 +322,22 @@
 </div>
 <div class="section" id="effective-interest-rates">
 <h2>Effective Interest Rates<a class="headerlink" href="#effective-interest-rates" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="effective-annual-rate">
-<h3>Effective Annual Rate<a class="headerlink" href="#effective-annual-rate" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><strong>Effective Annual Rate (EAR)</strong>, the interest rate as if it were compounded yearly instead of its actual compounding period</li>
 </ul>
-<p>Example:</p>
+<div class="section" id="example-basic-effective-annual-rate">
+<h3>Example: Basic Effective Annual Rate<a class="headerlink" href="#example-basic-effective-annual-rate" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>invest                      $100
 each half year get          10%
-after 1/2yr you will get    $10
-at t = 1 (year)             $121
-
-effective half year return = 10%
-eff 1 year return = 21% = EAR = effective annual rate
 </pre></div>
 </div>
+<p>then</p>
+<blockquote>
+<div><p>after 1/2yr you will get    $10
+at t = 1 (year)             $121</p>
+<p>effective half year return = 10%
+eff 1 year return = 21% = EAR = effective annual rate</p>
+</div></blockquote>
 </div>
 <div class="section" id="effective-interest-rate-for-1-n-year">
 <h3>Effective Interest Rate For 1/n Year<a class="headerlink" href="#effective-interest-rate-for-1-n-year" title="Permalink to this headline">¶</a></h3>
@@ -341,7 +349,9 @@ eff 1 year return = 21% = EAR = effective annual rate
 <ul class="simple">
 <li><strong>Annual Percentage Rate (APR)</strong>, an interest rate that is expressed as an EAR for an interest rate compounded twice per year (in Canada), often used for expressing the interest rate on items like car financing, etc.</li>
 </ul>
-<p>Example:</p>
+</div>
+<div class="section" id="example-converting-between-rates">
+<h3>Example: Converting Between Rates<a class="headerlink" href="#example-converting-between-rates" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span>
 <span class="mi">20</span><span class="o">%</span> <span class="n">p</span><span class="o">.</span><span class="n">a</span><span class="o">.</span> <span class="p">(</span><span class="n">per</span> <span class="n">annum</span><span class="p">)</span> <span class="n">compounded</span> <span class="n">twice</span> <span class="n">a</span> <span class="n">year</span>
 <span class="n">APR</span> <span class="o">-</span> <span class="n">compounded</span> <span class="n">twice</span> <span class="n">per</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">Canada</span>
@@ -359,20 +369,17 @@ eff 1 year return = 21% = EAR = effective annual rate
 <li>p = number of A periods in an A period</li>
 </ul>
 </div>
-</div>
-<div class="section" id="example">
-<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}j_2 = 20\% \\
 =&gt; eff 1/2 yr   &amp;= 0.2/2 \\
-                &amp;= 0.1 \\
-\\
-EAR &amp;= (1 + 0.1)^2 - 1 \\
-    &amp;= 0.21 \\
-\\
-eff month rate = (1 + 0.1)^{\frac 1 6} - 1 \\
-\\
-r_d = 10\% - APR\end{split}\]</div>
+                &amp;= 0.1\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}EAR &amp;= (1 + 0.1)^2 - 1 \\
+    &amp;= 0.21\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}eff month rate = (1 + 0.1)^{\frac 1 6} - 1 \\\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[r_d = 10\% - APR\]</div>
 <table border="1" class="docutils">
 <colgroup>
 <col width="10%" />
@@ -484,53 +491,62 @@ PV(1+r) = PV + rPV = C + \frac {C} {1 + r} + \frac {C} {(1 + r)^2} + ...        
 rPV = C                                                                         (1 - 2) \\
 \\
 PV = \frac {C} {r}\end{split}\]</div>
-<div class="section" id="example-1">
-<h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
-<dl class="docutils">
-<dt>::</dt>
-<dd>r = 10%,
-C = $1000 p.a, starting at t=1</dd>
-</dl>
-<div class="math notranslate nohighlight">
-\[\begin{split}PV_{t&gt;=1}   &amp;= \frac {C} {r} \\
-            &amp;= 1000/0.01 \\
-            &amp;= 10000\end{split}\]</div>
+<div class="section" id="example-basic-perpetuity">
+<h3>Example: Basic Perpetuity<a class="headerlink" href="#example-basic-perpetuity" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>r = 10%,
+C = $1000 p.a, starting at t=1
+</pre></div>
 </div>
-<div class="section" id="example-2">
-<h3>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}PV_{t \geq 1}   &amp;= \frac {C} {r} \\
+                &amp;= \frac {1000} {0.01} \\
+                &amp;= 10000\end{split}\]</div>
+</div>
+<div class="section" id="example-2-pv-from-different-time-perspective">
+<h3>Example 2: PV From Different Time Perspective<a class="headerlink" href="#example-2-pv-from-different-time-perspective" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>r = 10%,
 C = $1000 p.a, starting at t=0
 </pre></div>
 </div>
-<p>Method 1</p>
+<div class="section" id="method-1">
+<h4>Method 1<a class="headerlink" href="#method-1" title="Permalink to this headline">¶</a></h4>
 <div class="math notranslate nohighlight">
-\[PV_{t&gt;=0} = PV_{1000} + PV_{t&gt;=1}\]</div>
-<p>Method 2</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}PV_{t&gt;=-1}   &amp;= \frac {C} {r} \\
-\\
-PV_{t&gt;=0}   &amp;= PV_{t&gt;=-1} * (1 + r) \\
-            &amp;= 1000/0.1 * (1 * 0.1) \\
-            &amp;= 10000\end{split}\]</div>
+\[PV_{t \geq 0} = PV_{1000} + PV_{t \geq 1}\]</div>
 </div>
-<div class="section" id="example-3">
-<h3>Example 3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
-<p>r = 10%, C = $1000 p.a, starting at t=0.5</p>
+<div class="section" id="method-2">
+<h4>Method 2<a class="headerlink" href="#method-2" title="Permalink to this headline">¶</a></h4>
 <div class="math notranslate nohighlight">
-\[\begin{split}PV_{t&gt;=-0.5} &amp;= \frac {C} {r} \\
+\[\begin{split}PV_{t \geq -1}   &amp;= \frac {C} {r} \\
 \\
-PV_{t&gt;=0}   &amp;= PV_{t&gt;=-0.5} * (1 + r)^{0.5} \\
-            &amp;= 1000/0.1 * (1 * 0.1) \\
-            &amp;= 10000\end{split}\]</div>
+PV_{t \geq 0}   &amp;= PV_{t \geq -1} * (1 + r) \\
+                &amp;= \frac {1000} {0.1} * (1 * 0.1) \\
+                &amp;= 10000\end{split}\]</div>
 </div>
-<div class="section" id="in-general">
-<h3>In general<a class="headerlink" href="#in-general" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="example-pv-from-different-fractional-time-perspective">
+<h3>Example: PV From Different Fractional Time Perspective<a class="headerlink" href="#example-pv-from-different-fractional-time-perspective" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>r = 10%,
+C = $1000 p.a, starting at t=0.5
+</pre></div>
+</div>
 <div class="math notranslate nohighlight">
-\[\begin{split}if \\
-    PV_{t&gt;=-n} = \frac {C} {r}, n &gt; 0 \\
+\[\begin{split}PV_{t \geq -0.5} &amp;= \frac {C} {r} \\
 \\
-then \\
-    PV_{t&gt;=0} = PV_{t&gt;=n) * (1 + r)^(n)\end{split}\]</div>
+PV_{t \geq 0}   &amp;= PV_{t \geq -0.5} * (1 + r)^{0.5} \\
+                &amp;= \frac {1000} {0.1} * (1 + 0.1)^{0.5}\end{split}\]</div>
+</div>
+<div class="section" id="generalization-pv-from-different-fractional-time-perspective">
+<h3>Generalization: PV From Different Fractional Time Perspective<a class="headerlink" href="#generalization-pv-from-different-fractional-time-perspective" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}PV_{t \geq -n}      &amp;= \frac {C} {r}, n &gt; 0 \\
+=&gt; PV_{t \geq 0}    &amp;= PV_{t \geq -n} * (1 + r)^n\end{split}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}PV_{t \geq n}      &amp;= \frac {C} {r}, n &gt; 0 \\
+=&gt; PV_{t \geq 0}    &amp;= PV_{t \geq n} * \frac 1 {(1 + r)^n}\end{split}\]</div>
+<ul class="simple">
+<li>multiply PV by <span class="math notranslate nohighlight">\(r^n, r = \text{interest rate}, n = \text{number of times r is compounded}\)</span> if moving PV forward, divide by it if moving PV back</li>
+</ul>
 </div>
 </div>
 <div class="section" id="annuity">
@@ -545,15 +561,15 @@ then \\
 </li>
 </ul>
 <div class="math notranslate nohighlight">
-\[\begin{split}PV_{1&lt;=t&lt;=n}    &amp;= PV_{t&gt;=1} - PV_{t&gt;=n} \\
-                &amp;= \frac {C} {r} - \frac {\frac {C} {r}} {(1+r)^n}  \\
-                &amp;= \frac {C} {r} * (1 - \frac {1} {(1+r)^n}) \\
+\[\begin{split}PV_{1 \leq t \leq n}    &amp;= PV_{t \geq 1} - PV_{t \geq n} \\
+                        &amp;= (\frac {C} {r}) - (\frac {C} {r} * \frac {1} {(1+r)^n})  \\
+                        &amp;= \frac {C} {r} * (1 - \frac {1} {(1+r)^n}) \\
 \\
 where, \\
 \\
 n = \text{number of cash flow periods}\end{split}\]</div>
-<div class="section" id="id1">
-<h3>Example<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">10</span><span class="o">%</span>
 <span class="n">Annual</span> <span class="n">cash</span> <span class="n">flows</span> <span class="n">starting</span> <span class="ow">in</span> <span class="mi">1</span> <span class="n">yr</span>
 <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
@@ -561,11 +577,11 @@ n = \text{number of cash flow periods}\end{split}\]</div>
 </div>
 <div class="math notranslate nohighlight">
 \[\begin{split}PV  &amp;= \frac {C} {r} * (1 - \frac {1} {(1+r)^n}) \\
-    &amp;= \frac 1000 0.1 * (1 - \frac 1 {1.1^20} \\
+    &amp;= \frac 1000 0.1 * (1 - \frac 1 {1.1^{20}}) \\
     &amp;= 8513\end{split}\]</div>
 </div>
-<div class="section" id="id2">
-<h3>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h3>Example<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">10</span><span class="o">%</span>
 <span class="n">Annual</span> <span class="n">cash</span> <span class="n">flows</span> <span class="n">starting</span> <span class="n">today</span>
 <span class="n">Last</span> <span class="n">cash</span> <span class="n">flow</span> <span class="ow">in</span> <span class="mi">20</span> <span class="n">years</span>
@@ -576,8 +592,8 @@ n = \text{number of cash flow periods}\end{split}\]</div>
     &amp;= \frac {1000} {0.1} * (1 - \frac 1 {1.1^{21}}) * 1.1 \\
     &amp;= 9513.56\end{split}\]</div>
 </div>
-<div class="section" id="id3">
-<h3>Example<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>What is the value today of a policy that pays $1000 a year.
 20 cash flows.
 1st cash flow in 5 year.
@@ -585,10 +601,10 @@ r = 10%
 </pre></div>
 </div>
 <div class="math notranslate nohighlight">
-\[\begin{split}PV_{0&gt;=t&gt;=25}   &amp;= PV_{t&gt;=5, n=20} \\
-                &amp;= PV_{5&gt;=t&gt;=25} \\
-                &amp;= \frac {\frac {C} {r} * (1 - \frac {1} {(1+r)^n})*(1+r)} {(1+r)^4} \\
-                &amp;= \frac {1000} {0.1} * (1 - \frac 1 {1.1^{20}}) * 1.1\end{split}\]</div>
+\[\begin{split}PV_{0 \geq t \geq 25}   &amp;= PV_{t \geq 5, n=20} \\
+                        &amp;= PV_{5 \geq t  \geq 25} \\
+                        &amp;= \frac {\frac {C} {r} * (1 - \frac {1} {(1+r)^n})*(1+r)} {(1+r)^4} \\
+                        &amp;= \frac {1000} {0.1} * (1 - \frac 1 {1.1^{20}}) * 1.1\end{split}\]</div>
 </div>
 <div class="section" id="steps">
 <h3>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h3>
@@ -603,9 +619,11 @@ r = 10%
 </div>
 <div class="section" id="geometric-growth">
 <h2>Geometric Growth<a class="headerlink" href="#geometric-growth" title="Permalink to this headline">¶</a></h2>
-<p>g by 10% per year</p>
+<ul class="simple">
+<li>e.g. “g by 10% per year”</li>
+</ul>
 <div class="section" id="growth-perpetuity">
-<h3>growth perpetuity<a class="headerlink" href="#growth-perpetuity" title="Permalink to this headline">¶</a></h3>
+<h3>Growth Perpetuity<a class="headerlink" href="#growth-perpetuity" title="Permalink to this headline">¶</a></h3>
 <p>C = 1st cash flow</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\text{if } g &lt; r \\
@@ -615,12 +633,12 @@ r = 10%
 \text{then P doesn't converge} \\\end{split}\]</div>
 </div>
 <div class="section" id="growth-annuity">
-<h3>growth annuity<a class="headerlink" href="#growth-annuity" title="Permalink to this headline">¶</a></h3>
+<h3>Growth Annuity<a class="headerlink" href="#growth-annuity" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}PV = \frac C {r-g} * (1-(\frac {1+g} {1+r})^n)\\\text {as } n \rightarrow \infty , (\frac {1+g} {1+r})^n \rightarrow 0 , \text{ and } PV = \frac C {r-g}\end{aligned}\end{align} \]</div>
 </div>
-<div class="section" id="id4">
-<h3>Example<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h3>Example<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>r = 10%
 Today birthday t=20
 Deposit starting one year
@@ -632,15 +650,53 @@ first withdrawl to be 100k
 how much must you deposit each year?
 </pre></div>
 </div>
+<img alt="_images/cash_flows.png" src="_images/cash_flows.png" />
 <div class="math notranslate nohighlight">
-\[\begin{split}\text{Amount needed at t=65}    &amp;= PV_{66&lt;=t&lt;=85} \\
-                                &amp;= \frac C {r-g} * (1-(\frac {1+g} {1+r})^n) \\
-                                &amp;= -100000/(0.1-0.03)*(1-(1.03/1.1)^20)\end{split}\]</div>
+\[\begin{split}\text{Amount needed at t=65}    &amp;= PV_{66 \leq t \leq 85} \\
+                                &amp;= \frac {C_{First Withdrawl}} {r-g} * (1-(\frac {1+g} {1+r})^n) \\
+                                &amp;= \frac {-100000} {0.1-0.03} * (1-(\frac {1.03} {1.1})^{20})\end{split}\]</div>
 <div class="math notranslate nohighlight">
-\[\begin{split}PV_{21&lt;=t&lt;=65}    &amp;= -PV_{66&lt;=t&lt;=85} \\
-                &amp;= \frac {-C} {0.1} * (1-(\frac {1} {1+0.1})^{45}) *(1+0.1)^{45} \\\end{split}\]</div>
+\[\begin{split}PV_{21 \leq t \leq 65}  &amp;= - PV_{66 \leq t \leq 85} \\
+                &amp;= - \frac {C_{deposit}} {0.1} * (1-(\frac {1} {1+0.1})^{45}) *(1+0.1)^{45} \\\end{split}\]</div>
 <div class="math notranslate nohighlight">
-\[C = \text{how much we must deposit each year}\]</div>
+\[C_{deposit} = \text{how much we must deposit each year}\]</div>
+</div>
+<div class="section" id="assignment-question-8">
+<h3>Assignment Question 8<a class="headerlink" href="#assignment-question-8" title="Permalink to this headline">¶</a></h3>
+<img alt="sometng" src="sometng" />
+<div class="math notranslate nohighlight">
+\[\text{eff q rate} = \frac {0.08} 4 = 0.02\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\text{eff 1/2 rate} &amp;= (1+0.02)^2 - 1 \\
+                    &amp;= 0.0404\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}PV_\text{bank acc today t=0}    &amp;= \frac {4000} {0.0404} * (1 - \frac 1 {1.0404^{10}} * (1 + 0.0404)^{11} \\
+                                &amp;= 50057\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}PV_\text{bank acc today t=0} &amp;= PV_\text{withdrawls from today} \\
+PV_\text{bank acc today t=0} &amp;= PV_\text{withdrawls from today PT1} + PV_\text{withdrawls from today PT2} \\
+50057 &amp;= [2C + \frac {2C} {0.035} * (1 - \frac 1 {1.035^5})] + [\frac C {0.035} * (1 - \frac 1 {1.035^6}) * \frac 1 {1.035^5}]\end{split}\]</div>
+</div>
+<div class="section" id="assignment-question-9">
+<h3>Assignment Question 9<a class="headerlink" href="#assignment-question-9" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}EAR = 10\%, EAR = e^q - 1 \\\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}0.1 &amp;= e^q - 1 \\
+e^q &amp;= 1.1 \\
+ln e ^ q &amp;= ln 1.1 \\
+q &amp;= ln 1.1
+cont comp r = ln 1.1\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[eff m rate = (1+0.10)^{\frac 1 {12}} - 1\]</div>
+</div>
+<div class="section" id="assignment-question-3">
+<h3>Assignment Question 3<a class="headerlink" href="#assignment-question-3" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[Borrow $10000, r = 20\%
+Int = 2000/12000 \rightarrow $1000/month \text{in interest payments}\]</div>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}PV = 10000 = \frac {1000} r * (1 - \frac 1 {(1+r)^{12}})\\emr = (1 + EAR)^{1/12} - 1\end{aligned}\end{align} \]</div>
 </div>
 </div>
 </div>

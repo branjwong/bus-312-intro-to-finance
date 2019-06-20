@@ -51,23 +51,24 @@ Present Value vs Future Value
 Effective Interest Rates
 ------------------------
 
-Effective Annual Rate
-`````````````````````
-
 - **Effective Annual Rate (EAR)**, the interest rate as if it were compounded yearly instead of its actual compounding period
 
 
-Example: 
+Example: Basic Effective Annual Rate
+````````````````````````````````````
+
 :: 
 
     invest                      $100
     each half year get          10%
+
+then
+
     after 1/2yr you will get    $10
     at t = 1 (year)             $121
 
     effective half year return = 10%
     eff 1 year return = 21% = EAR = effective annual rate
-
 
 
 Effective Interest Rate For 1/n Year
@@ -83,7 +84,10 @@ Effective Interest Rate For 1/n Year
 - **Annual Percentage Rate (APR)**, an interest rate that is expressed as an EAR for an interest rate compounded twice per year (in Canada), often used for expressing the interest rate on items like car financing, etc.
 
 
-Example:: 
+Example: Converting Between Rates
+`````````````````````````````````
+
+:: 
 
     if
     20% p.a. (per annum) compounded twice a year
@@ -92,7 +96,6 @@ Example::
 
         J implies per year
         2 implies compounded twice per year
-
 
 .. admonition:: Converting Between Rates
 
@@ -103,20 +106,24 @@ Example::
 
     - p = number of A periods in an A period
 
-Example
-```````
 
 .. math:: 
 
     j_2 = 20\% \\
     => eff 1/2 yr   &= 0.2/2 \\
-                    &= 0.1 \\
-    \\
+                    &= 0.1 
+
+.. math:: 
+
     EAR &= (1 + 0.1)^2 - 1 \\
-        &= 0.21 \\
-    \\
+        &= 0.21 
+
+.. math:: 
+
     eff month rate = (1 + 0.1)^{\frac 1 6} - 1 \\
-    \\
+
+.. math:: 
+
     r_d = 10\% - APR
 
 ==  ============    ======
@@ -192,21 +199,22 @@ Suppose cash flow every period = C
     \\
     PV = \frac {C} {r}
 
-Example 1
-`````````
+Example: Basic Perpetuity
+```````````````````````````
 
 ::
+
     r = 10%, 
     C = $1000 p.a, starting at t=1
 
 .. math::
     
-    PV_{t>=1}   &= \frac {C} {r} \\
-                &= 1000/0.01 \\
-                &= 10000 
+    PV_{t \geq 1}   &= \frac {C} {r} \\
+                    &= \frac {1000} {0.01} \\
+                    &= 10000 
 
-Example 2
-`````````
+Example 2: PV From Different Time Perspective 
+`````````````````````````````````````````````````
 
 :: 
 
@@ -214,47 +222,56 @@ Example 2
     C = $1000 p.a, starting at t=0
 
 Method 1
-
+''''''''
 .. math::
 
-    PV_{t>=0} = PV_{1000} + PV_{t>=1}
+
+    PV_{t \geq 0} = PV_{1000} + PV_{t \geq 1}
 
 Method 2
+''''''''
 
 .. math::
 
-    PV_{t>=-1}   &= \frac {C} {r} \\
+    PV_{t \geq -1}   &= \frac {C} {r} \\
     \\
-    PV_{t>=0}   &= PV_{t>=-1} * (1 + r) \\
-                &= 1000/0.1 * (1 * 0.1) \\
-                &= 10000
+    PV_{t \geq 0}   &= PV_{t \geq -1} * (1 + r) \\
+                    &= \frac {1000} {0.1} * (1 * 0.1) \\
+                    &= 10000
 
 
-Example 3
-`````````
-r = 10%, C = $1000 p.a, starting at t=0.5
+Example: PV From Different Fractional Time Perspective
+``````````````````````````````````````````````````````
+
+::
+
+    r = 10%, 
+    C = $1000 p.a, starting at t=0.5
 
 .. math::
 
-    PV_{t>=-0.5} &= \frac {C} {r} \\
+    PV_{t \geq -0.5} &= \frac {C} {r} \\
     \\
-    PV_{t>=0}   &= PV_{t>=-0.5} * (1 + r)^{0.5} \\
-                &= 1000/0.1 * (1 * 0.1) \\
-                &= 10000
+    PV_{t \geq 0}   &= PV_{t \geq -0.5} * (1 + r)^{0.5} \\
+                    &= \frac {1000} {0.1} * (1 + 0.1)^{0.5} 
 
 
-In general
-``````````
+Generalization: PV From Different Fractional Time Perspective
+`````````````````````````````````````````````````````````````
 
 .. math::
 
-    if \\ 
-        PV_{t>=-n} = \frac {C} {r}, n > 0 \\
-    \\
-    then \\
-        PV_{t>=0} = PV_{t>=n) * (1 + r)^(n)
+    PV_{t \geq -n}      &= \frac {C} {r}, n > 0 \\
+    => PV_{t \geq 0}    &= PV_{t \geq -n} * (1 + r)^n
 
+and
 
+.. math::
+
+    PV_{t \geq n}      &= \frac {C} {r}, n > 0 \\
+    => PV_{t \geq 0}    &= PV_{t \geq n} * \frac 1 {(1 + r)^n}
+
+- multiply PV by :math:`r^n, r = \text{interest rate}, n = \text{number of times r is compounded}` if moving PV forward, divide by it if moving PV back
 
 Annuity
 -------
@@ -265,9 +282,9 @@ Annuity
 
 .. math::
 
-    PV_{1<=t<=n}    &= PV_{t>=1} - PV_{t>=n} \\
-                    &= \frac {C} {r} - \frac {\frac {C} {r}} {(1+r)^n}  \\
-                    &= \frac {C} {r} * (1 - \frac {1} {(1+r)^n}) \\
+    PV_{1 \leq t \leq n}    &= PV_{t \geq 1} - PV_{t \geq n} \\
+                            &= (\frac {C} {r}) - (\frac {C} {r} * \frac {1} {(1+r)^n})  \\
+                            &= \frac {C} {r} * (1 - \frac {1} {(1+r)^n}) \\
     \\
     where, \\
     \\
@@ -285,7 +302,7 @@ Example
 .. math::
 
     PV  &= \frac {C} {r} * (1 - \frac {1} {(1+r)^n}) \\
-        &= \frac 1000 0.1 * (1 - \frac 1 {1.1^20} \\
+        &= \frac 1000 0.1 * (1 - \frac 1 {1.1^{20}}) \\
         &= 8513
 
 
@@ -317,10 +334,10 @@ Example
 
 .. math::
 
-    PV_{0>=t>=25}   &= PV_{t>=5, n=20} \\
-                    &= PV_{5>=t>=25} \\
-                    &= \frac {\frac {C} {r} * (1 - \frac {1} {(1+r)^n})*(1+r)} {(1+r)^4} \\
-                    &= \frac {1000} {0.1} * (1 - \frac 1 {1.1^{20}}) * 1.1
+    PV_{0 \geq t \geq 25}   &= PV_{t \geq 5, n=20} \\
+                            &= PV_{5 \geq t  \geq 25} \\
+                            &= \frac {\frac {C} {r} * (1 - \frac {1} {(1+r)^n})*(1+r)} {(1+r)^4} \\
+                            &= \frac {1000} {0.1} * (1 - \frac 1 {1.1^{20}}) * 1.1
 
 Steps
 `````
@@ -335,10 +352,11 @@ Steps
 Geometric Growth
 ----------------
 
-g by 10% per year
+- e.g. "g by 10% per year"
 
-growth perpetuity 
+Growth Perpetuity 
 `````````````````
+
 C = 1st cash flow
 
 .. math::
@@ -350,7 +368,7 @@ C = 1st cash flow
     \text{then P doesn't converge} \\
 
 
-growth annuity
+Growth Annuity
 ``````````````
 
 .. math:: 
@@ -374,19 +392,81 @@ Example
     first withdrawl to be 100k
     how much must you deposit each year?
 
-.. math::
-
-    \text{Amount needed at t=65}    &= PV_{66<=t<=85} \\ 
-                                    &= \frac C {r-g} * (1-(\frac {1+g} {1+r})^n) \\
-                                    &= -100000/(0.1-0.03)*(1-(1.03/1.1)^20)
+.. image:: _static/cash_flows.png
 
 .. math::
 
-    PV_{21<=t<=65}    &= -PV_{66<=t<=85} \\
-                    &= \frac {-C} {0.1} * (1-(\frac {1} {1+0.1})^{45}) *(1+0.1)^{45} \\
+    \text{Amount needed at t=65}    &= PV_{66 \leq t \leq 85} \\ 
+                                    &= \frac {C_{First Withdrawl}} {r-g} * (1-(\frac {1+g} {1+r})^n) \\
+                                    &= \frac {-100000} {0.1-0.03} * (1-(\frac {1.03} {1.1})^{20})
 
 .. math::
 
-    C = \text{how much we must deposit each year}
+    PV_{21 \leq t \leq 65}  &= - PV_{66 \leq t \leq 85} \\
+                    &= - \frac {C_{deposit}} {0.1} * (1-(\frac {1} {1+0.1})^{45}) *(1+0.1)^{45} \\
+
+.. math::
+
+    C_{deposit} = \text{how much we must deposit each year}
 
 
+Assignment Question 8
+`````````````````````
+
+.. image:: sometng
+
+.. math::
+
+    \text{eff q rate} = \frac {0.08} 4 = 0.02
+
+.. math::
+
+    \text{eff 1/2 rate} &= (1+0.02)^2 - 1 \\
+                        &= 0.0404 
+
+.. math::
+
+    PV_\text{bank acc today t=0}    &= \frac {4000} {0.0404} * (1 - \frac 1 {1.0404^{10}} * (1 + 0.0404)^{11} \\
+                                    &= 50057
+
+.. math::
+
+    PV_\text{bank acc today t=0} &= PV_\text{withdrawls from today} \\
+    PV_\text{bank acc today t=0} &= PV_\text{withdrawls from today PT1} + PV_\text{withdrawls from today PT2} \\
+    50057 &= [2C + \frac {2C} {0.035} * (1 - \frac 1 {1.035^5})] + [\frac C {0.035} * (1 - \frac 1 {1.035^6}) * \frac 1 {1.035^5}] 
+
+
+
+
+Assignment Question 9
+`````````````````````
+
+.. math:: 
+
+    EAR = 10\%, EAR = e^q - 1 \\
+
+.. math:: 
+
+        0.1 &= e^q - 1 \\
+        e^q &= 1.1 \\
+        ln e ^ q &= ln 1.1 \\
+        q &= ln 1.1 
+        cont comp r = ln 1.1
+
+.. math:: 
+
+    eff m rate = (1+0.10)^{\frac 1 {12}} - 1
+
+Assignment Question 3
+`````````````````````
+
+.. math:: 
+
+    Borrow $10000, r = 20\%
+    Int = 2000/12000 \rightarrow $1000/month \text{in interest payments}
+
+.. math::
+
+    PV = 10000 = \frac {1000} r * (1 - \frac 1 {(1+r)^{12}})
+
+    emr = (1 + EAR)^{1/12} - 1
