@@ -151,10 +151,16 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ch5.html">Taxation and Investment Returns</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ch5.html#cca">CCA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ch5.html#example-ucc-over-time">Example: UCC Over Time</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ch5.html#example-terminal-loss-vs-cca-recapture">Example: Terminal Loss vs CCA Recapture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ch5.html#example-taxable-income-sources">Example: Taxable Income Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch5.html#capital-gains">Capital Gains</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ch5.html#example-calculating-tax-against-capital-gain">Example: Calculating Tax against Capital Gain</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ch5.html#cca">CCA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ch5.html#example-ucc-over-time">Example: UCC Over Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ch5.html#example-terminal-loss-vs-cca-recapture">Example: Terminal Loss vs CCA Recapture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ch5.html#example-taxable-income-sources">Example: Taxable Income Sources</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="ch5.html#assignment-4-question-3">Assignment 4, Question 3</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="ch5.html#asset-class-x">Asset Class X</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ch5.html#asset-class-y">Asset Class Y</a></li>
@@ -165,23 +171,37 @@
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">The Mathematics of Finance</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#present-value-vs-future-value">Present Value vs Future Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#present-value-vs-future-value">Present Value vs Future Value</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#brandon-s-point-of-view-value-conversion-formula">Brandon’s Point of View Value Conversion Formula</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#nominal-interest-rates">Nominal Interest Rates</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#effective-interest-rates">Effective Interest Rates</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#example-basic-effective-annual-rate">Example: Basic Effective Annual Rate</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#effective-interest-rate-for-1-n-year">Effective Interest Rate For 1/n Year</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#example-converting-between-rates">Example: Converting Between Rates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conversion-between-nominal-and-effective-interest-rates">Conversion Between Nominal And Effective Interest Rates</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example-basic-effective-annual-rate">Example: Basic Effective Annual Rate</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#conversion-between-effective-interest-rates">Conversion Between Effective Interest Rates</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example-basic-conversion">Example: Basic Conversion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-converting-between-rates">Example: Converting Between Rates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-converting-to-effective-annual-rate">Example: Converting To Effective Annual Rate</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#continuously-compounded-rate">Continuously Compounded Rate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#inflation">Inflation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#perpetuity">Perpetuity</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#example-basic-perpetuity">Example: Basic Perpetuity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#example-2-displaced-perpetuity">Example 2: Displaced Perpetuity</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#method-1">Method 1</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#method-2">Method 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#method-1-component-addition">Method 1: Component Addition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#method-2-pov-conversion">Method 2: POV Conversion</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#example-fractionally-displaced-perpetuity">Example: Fractionally Displaced Perpetuity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#generalization-displaced-pv">Generalization: Displaced PV</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#annuity">Annuity</a><ul>
@@ -296,21 +316,21 @@
 <h2>Present Value vs Future Value<a class="headerlink" href="#present-value-vs-future-value" title="Permalink to this headline">¶</a></h2>
 <div class="math notranslate nohighlight">
 \[\begin{split}FV  &amp;= PV + rPV \\
-    &amp;= PV(1+r) \\\end{split}\]</div>
+    &amp;= PV(1+r)\end{split}\]</div>
 <div class="math notranslate nohighlight">
-\[\begin{split}FV_{t=2} &amp;= PV(1+r)^2 \\\end{split}\]</div>
+\[\begin{split}FV_{t=2} = PV*(1+r)^2 \\\end{split}\]</div>
 <div class="admonition-future-value-of-investement admonition">
 <p class="first admonition-title">Future Value of Investement</p>
 <div class="math notranslate nohighlight">
-\[FV_{t=n} = PV(1+r)^n\]</div>
+\[FV_{t=n} = PV*(1+r)^n\]</div>
 <ul class="last simple">
-<li>n = the number of compounding periods</li>
+<li>n = the number of compounding periods <em>in between PV and FV</em></li>
 <li>PV = the present value of investment (capital)</li>
 <li><span class="math notranslate nohighlight">\(FV_{t=n}\)</span> is the future value of an investment at the nth period</li>
 </ul>
 </div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
 <ul class="last">
 <li><p class="first">r and n should talk in terms of the same time frame</p>
 <blockquote>
@@ -322,14 +342,113 @@
 </li>
 </ul>
 </div>
+<div class="section" id="brandon-s-point-of-view-value-conversion-formula">
+<h3>Brandon’s Point of View Value Conversion Formula<a class="headerlink" href="#brandon-s-point-of-view-value-conversion-formula" title="Permalink to this headline">¶</a></h3>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<div class="math notranslate nohighlight">
+\[V_{t=f} = V_{t=i}*(1+r)^{c*(f-i)}\]</div>
+<ul class="simple">
+<li><span class="math notranslate nohighlight">\(V_{t=t_o} =\)</span> Value of Investment at time <span class="math notranslate nohighlight">\(t_o\)</span></li>
+<li><span class="math notranslate nohighlight">\(r =\)</span> interest rate compounded at the same unit of time as <span class="math notranslate nohighlight">\(t_o\)</span></li>
+<li>f = final year</li>
+<li>i = initial year</li>
+<li>c = number of times interest is compounded per year</li>
+</ul>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p>Compared to other formula:</p>
+<ul class="last simple">
+<li><span class="math notranslate nohighlight">\(n = c*(f-i)\)</span></li>
+<li><span class="math notranslate nohighlight">\(PV = V_{t=i}\)</span></li>
+<li><span class="math notranslate nohighlight">\(FV = V_{t=f}\)</span></li>
+<li>new formula encapsulates the idea of moving the point of view of different valuations</li>
+</ul>
+</div>
+</div>
+<div class="admonition-alternate-pov-conversion-formula admonition">
+<p class="first admonition-title">Alternate POV Conversion Formula</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}V_{t \geq -n} \text{ is given}, n &gt; 0 \rightarrow V_{t \geq 0} = V_{t \geq -n} * (1 + r)^n \\
+\\
+and \\
+\\
+V_{t \geq n} \text{ is given}, n &gt; 0 \rightarrow V_{t \geq 0} = V_{t \geq n} * \frac 1 {(1 + r)^n}\end{split}\]</div>
+<ul class="last simple">
+<li>multiply V by <span class="math notranslate nohighlight">\(r^n, r = \text{interest rate}, n = \text{number of times r is compounded}\)</span> if moving V forward, divide by it if moving V back</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="nominal-interest-rates">
+<h2>Nominal Interest Rates<a class="headerlink" href="#nominal-interest-rates" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first"><strong>nominal interest rate</strong>, an interest rate “as stated” without adjustment for the full effect of compounding</p>
+<blockquote>
+<div><ul class="simple">
+<li>is the effective interest rate compounded yearly</li>
+<li>an interest rate is called nominal if the frequency of compounding (e.g. a month) is not identical to the basic time unit in which the nominal rate is quoted (normally a year)</li>
+<li>e.g. “8% per year, compounded monthly” = nominal 8% per year compounded 12 times per year = <span class="math notranslate nohighlight">\(j_{12} = 0.08\)</span></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition-naming-of-nominal-interest-rates admonition">
+<p class="first admonition-title">Naming of Nominal Interest Rates</p>
+<div class="last math notranslate nohighlight">
+\[\begin{split}\text{nominal annual rate} = \text{nominal yearly rate} = j_1 \\
+\text{nominal quarterly rate} = j_4 \\
+\text{nominal monthly rate} = j_{12}\end{split}\]</div>
+</div>
 </div>
 <div class="section" id="effective-interest-rates">
 <h2>Effective Interest Rates<a class="headerlink" href="#effective-interest-rates" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><strong>Effective Annual Rate (EAR)</strong>, the interest rate as if it were compounded yearly instead of its actual compounding period</li>
+<ul>
+<li><p class="first"><strong>Effective Interest Rate (EIR)</strong>, the interest rate on a loan or financial product restated from the nominal interest rate as an interest rate with annual compound interest payable in arrears.</p>
+<blockquote>
+<div><ul class="simple">
+<li>It is used to compare the annual interest between loans with different compounding periods like week, month, year, etc.</li>
 </ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Effective Annual Rate (EAR)</strong>, the interest rate as if it were compounded yearly instead of its actual compounding period</p>
+</li>
+</ul>
+<div class="section" id="conversion-between-nominal-and-effective-interest-rates">
+<h3>Conversion Between Nominal And Effective Interest Rates<a class="headerlink" href="#conversion-between-nominal-and-effective-interest-rates" title="Permalink to this headline">¶</a></h3>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<div class="math notranslate nohighlight">
+\[\frac {j_n} {n} = EIR_n\]</div>
+<ul class="last simple">
+<li><span class="math notranslate nohighlight">\(j_n =\)</span> nominal interest rate (that’s expressed as an interest rate compounded yearly) for an effective interest rate componded n times monthly</li>
+<li><span class="math notranslate nohighlight">\(EIR_n\)</span> effective interest rate compounded n times monthly</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The nominal interest rate is the same as the effective annual interest rate.</p>
+<div class="last math notranslate nohighlight">
+\[j_1 = EIR_1\]</div>
+</div>
+<div class="admonition-naming-of-effective-interest-rates admonition">
+<p class="first admonition-title">Naming of Effective Interest Rates</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}EAR = \text{effective annual rate} = \text{effective yearly rate} = EIR_{1} \\
+EQR = \text{effective quarterly rate} = EIR_{4} \\
+EMR = \text{effective monthly rate} = EIR_{12}\end{split}\]</div>
+<ul class="last">
+<li><p class="first"><strong>Annual Percentage Rate (APR)</strong>, an interest rate that is expressed as an EAR for an interest rate compounded twice per year (in Canada), often used for expressing the interest rate on items like car financing, etc.</p>
+<blockquote>
+<div><ul class="simple">
+<li><span class="math notranslate nohighlight">\(APR = EIR_2\)</span></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
 <div class="section" id="example-basic-effective-annual-rate">
-<h3>Example: Basic Effective Annual Rate<a class="headerlink" href="#example-basic-effective-annual-rate" title="Permalink to this headline">¶</a></h3>
+<h4>Example: Basic Effective Annual Rate<a class="headerlink" href="#example-basic-effective-annual-rate" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>invest                      $100
 each half year get          10%
 </pre></div>
@@ -338,23 +457,33 @@ each half year get          10%
 <blockquote>
 <div><p>after 1/2yr you will get    $10
 at t = 1 (year)             $121</p>
-<p>effective half year return = 10%
-eff 1 year return = 21% = EAR = effective annual rate</p>
+<p>EIR_2 = effective half year rate = 10%
+EIR_1 = EAR = 21%</p>
 </div></blockquote>
 </div>
-<div class="section" id="effective-interest-rate-for-1-n-year">
-<h3>Effective Interest Rate For 1/n Year<a class="headerlink" href="#effective-interest-rate-for-1-n-year" title="Permalink to this headline">¶</a></h3>
-<div class="admonition-effective-rate-for-1-n-year admonition">
-<p class="first admonition-title">Effective Rate for 1/n Year</p>
-<div class="last math notranslate nohighlight">
-\[\frac {j_n} {n} = eff rate for 1/n year\]</div>
 </div>
-<ul class="simple">
-<li><strong>Annual Percentage Rate (APR)</strong>, an interest rate that is expressed as an EAR for an interest rate compounded twice per year (in Canada), often used for expressing the interest rate on items like car financing, etc.</li>
+<div class="section" id="conversion-between-effective-interest-rates">
+<h3>Conversion Between Effective Interest Rates<a class="headerlink" href="#conversion-between-effective-interest-rates" title="Permalink to this headline">¶</a></h3>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\text{EIR}_X &amp;= (1 + \text{EIR}_Y)^p - 1 \\
+\text{EIR}_X &amp;= (1 + \text{EIR}_Y)^{Y/X} - 1\end{split}\]</div>
+<ul class="last simple">
+<li>p = number of Y periods in an X period</li>
 </ul>
 </div>
+<div class="section" id="example-basic-conversion">
+<h4>Example: Basic Conversion<a class="headerlink" href="#example-basic-conversion" title="Permalink to this headline">¶</a></h4>
+<div class="math notranslate nohighlight">
+\[\begin{split}\text{EIR}_{yearly} &amp;= (1 + \text{EIR}_{monthly})^{12} - 1 \\
+\text{EIR}_{1}      &amp;= (1 + \text{EIR}_{12})^{12} - 1\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\text{EIR}_{monthly}    &amp;= (1 + \text{EIR}_{yearly})^{1/12} - 1 \\
+\text{EIR}_{12}         &amp;= (1 + \text{EIR}_{1})^{1/12} - 1\end{split}\]</div>
+</div>
 <div class="section" id="example-converting-between-rates">
-<h3>Example: Converting Between Rates<a class="headerlink" href="#example-converting-between-rates" title="Permalink to this headline">¶</a></h3>
+<h4>Example: Converting Between Rates<a class="headerlink" href="#example-converting-between-rates" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span>
 <span class="mi">20</span><span class="o">%</span> <span class="n">p</span><span class="o">.</span><span class="n">a</span><span class="o">.</span> <span class="p">(</span><span class="n">per</span> <span class="n">annum</span><span class="p">)</span> <span class="n">compounded</span> <span class="n">twice</span> <span class="n">a</span> <span class="n">year</span>
 <span class="n">APR</span> <span class="o">-</span> <span class="n">compounded</span> <span class="n">twice</span> <span class="n">per</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">Canada</span>
@@ -364,35 +493,37 @@ eff 1 year return = 21% = EAR = effective annual rate</p>
     <span class="mi">2</span> <span class="n">implies</span> <span class="n">compounded</span> <span class="n">twice</span> <span class="n">per</span> <span class="n">year</span>
 </pre></div>
 </div>
-<div class="admonition-converting-between-rates admonition">
-<p class="first admonition-title">Converting Between Rates</p>
 <div class="math notranslate nohighlight">
-\[EffRate_A = (1 + EffRate_B)^p - 1\]</div>
-<ul class="last simple">
-<li>p = number of A periods in an A period</li>
-</ul>
+\[\begin{split}j_2 = 20\% \\\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}EIR_2   &amp;= j_2/2 \\
+EIR_2   &amp;= 0.2/2 \\
+        &amp;= 0.1\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}EIR_1   &amp;= (1 + 0.1)^2 - 1 \\
+        &amp;= 0.21\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[EIR_{12} = (1 + 0.1)^{\frac 1 6} - 1\]</div>
+<div class="math notranslate nohighlight">
+\[r_d = 10\% - APR ??\]</div>
 </div>
+<div class="section" id="example-converting-to-effective-annual-rate">
+<h4>Example: Converting To Effective Annual Rate<a class="headerlink" href="#example-converting-to-effective-annual-rate" title="Permalink to this headline">¶</a></h4>
 <div class="math notranslate nohighlight">
-\[\begin{split}j_2 = 20\% \\
-=&gt; eff 1/2 yr   &amp;= 0.2/2 \\
-                &amp;= 0.1\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}EAR &amp;= (1 + 0.1)^2 - 1 \\
-    &amp;= 0.21\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}eff month rate = (1 + 0.1)^{\frac 1 6} - 1 \\\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[r_d = 10\% - APR\]</div>
+\[\begin{split}EAR = (1 + EIR_n)^n - 1 \\
+\\
+EAR = (1 + 0.05)^2 - 1 = 0.1025 \\
+EAR = (1 + 0.025)^4 - 1 = 0.1038 \\\end{split}\]</div>
 <table border="1" class="docutils">
 <colgroup>
-<col width="10%" />
-<col width="60%" />
-<col width="30%" />
+<col width="5%" />
+<col width="43%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">n</th>
-<th class="head">eff 1/n yr r</th>
-<th class="head">EAR</th>
+<th class="head"><span class="math notranslate nohighlight">\(EIR_n\)</span></th>
+<th class="head"><span class="math notranslate nohighlight">\(EAR = EIR_{1}\)</span></th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -414,18 +545,25 @@ eff 1 year return = 21% = EAR = effective annual rate</p>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div class="section" id="continuously-compounded-rate">
+<h3>Continuously Compounded Rate<a class="headerlink" href="#continuously-compounded-rate" title="Permalink to this headline">¶</a></h3>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}EAR_n = (1 + eff 1/n yr r)^n - 1 \\
-\\
-EAR_2 = (1 + 0.05)^2 - 1 = 0.1025 \\
-EAR_4 = (1 + 0.025)^4 - 1 = 0.1038 \\
-\\
-EAR = e^q - 1, \\
-    e = Euler's Constant \\
-    q = Continuously Compounded Rate \\
-\\
-EAR = e^0.1 - 1 \\
+\[\begin{split}EAR = e^q - 1, \\\end{split}\]</div>
+<ul class="last simple">
+<li><span class="math notranslate nohighlight">\(e = \text{Euler's Constant}\)</span></li>
+<li><span class="math notranslate nohighlight">\(q = \text{Continuously Compounded Rate}\)</span></li>
+</ul>
+</div>
+<div class="section" id="example">
+<h4>Example:<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
+<div class="math notranslate nohighlight">
+\[\begin{split}EAR = e^{0.1} - 1 \\
     = 0.10517\end{split}\]</div>
+</div>
 </div>
 </div>
 <div class="section" id="inflation">
@@ -485,15 +623,33 @@ EAR = e^0.1 - 1 \\
 </div></blockquote>
 </li>
 </ul>
-<p>Calculating the PV of perpetuity cash flows</p>
-<p>Suppose cash flow every period = C</p>
-<div class="math notranslate nohighlight">
+<div class="admonition-calculating-the-pv-of-perpetuity-cash-flows admonition">
+<p class="first admonition-title">Calculating the PV of perpetuity cash flows</p>
+<p>Suppose C = cash flow every period after period t=1</p>
+<div class="last math notranslate nohighlight">
 \[\begin{split}PV = \frac {C} {1 + r} + \frac {C} {(1 + r)^2} + \frac {C} {(1 + r)^3} + ...    (1) \\
 PV(1+r) = PV + rPV = C + \frac {C} {1 + r} + \frac {C} {(1 + r)^2} + ...        (2) \\
 \\
 rPV = C                                                                         (1 - 2) \\
 \\
 PV = \frac {C} {r}\end{split}\]</div>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<div class="math notranslate nohighlight">
+\[V_{t \geq 0} = P_{t \geq 1} = \frac {C_{t \geq 1}} r\]</div>
+<ul class="last simple">
+<li>C - cash flow at every period starting at period t=1</li>
+<li>r - effective interest rate compounded every period</li>
+<li><span class="math notranslate nohighlight">\(P_{t \geq 1} = \text{perpetuity starting with first cash flow at period t=1}\)</span></li>
+<li><span class="math notranslate nohighlight">\(V_{t \geq 0} = PV\)</span></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last math notranslate nohighlight">
+\[P_{t \geq a} = P_{t \geq b}, \text{for any }a, b\]</div>
+</div>
 <div class="section" id="example-basic-perpetuity">
 <h3>Example: Basic Perpetuity<a class="headerlink" href="#example-basic-perpetuity" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>r = 10%,
@@ -501,7 +657,8 @@ C = $1000 p.a, starting at t=1
 </pre></div>
 </div>
 <div class="math notranslate nohighlight">
-\[\begin{split}PV_{t \geq 1}   &amp;= \frac {C} {r} \\
+\[\begin{split}V_{t \geq 0}    &amp;= {P_{t \geq 1}} \\
+                &amp;= \frac {C_{t \geq 1}} {r} \\
                 &amp;= \frac {1000} {0.01} \\
                 &amp;= 10000\end{split}\]</div>
 </div>
@@ -511,17 +668,20 @@ C = $1000 p.a, starting at t=1
 C = $1000 p.a, starting at t=0
 </pre></div>
 </div>
-<div class="section" id="method-1">
-<h4>Method 1<a class="headerlink" href="#method-1" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="method-1-component-addition">
+<h4>Method 1: Component Addition<a class="headerlink" href="#method-1-component-addition" title="Permalink to this headline">¶</a></h4>
 <div class="math notranslate nohighlight">
-\[PV_{t \geq 0} = PV_{1000} + PV_{t \geq 1}\]</div>
+\[\begin{split}V_{t \geq 0}    &amp;= V_{t=0} + {P_{t \geq 1}} \\
+                &amp;= 1000 + 10000 \\
+                &amp;= 11000\end{split}\]</div>
 </div>
-<div class="section" id="method-2">
-<h4>Method 2<a class="headerlink" href="#method-2" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="method-2-pov-conversion">
+<h4>Method 2: POV Conversion<a class="headerlink" href="#method-2-pov-conversion" title="Permalink to this headline">¶</a></h4>
 <div class="math notranslate nohighlight">
-\[\begin{split}PV_{t \geq -1}   &amp;= \frac {C} {r} \\
-\\
-PV_{t \geq 0}   &amp;= PV_{t \geq -1} * (1 + r) \\
+\[\begin{split}V_{t \geq -1}   &amp;= {P_{t \geq 0}} \\
+                &amp;= \frac {C_{t \geq 0}} {r} \\\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}V_{t \geq 0}    &amp;= V_{t \geq -1} * (1 + r) \\
                 &amp;= \frac {1000} {0.1} * (1 * 0.1) \\
                 &amp;= 10000\end{split}\]</div>
 </div>
@@ -533,23 +693,11 @@ C = $1000 p.a, starting at t=0.5
 </pre></div>
 </div>
 <div class="math notranslate nohighlight">
-\[\begin{split}PV_{t \geq -0.5} &amp;= \frac {C} {r} \\
-\\
-PV_{t \geq 0}   &amp;= PV_{t \geq -0.5} * (1 + r)^{0.5} \\
+\[\begin{split}V_{t \geq -0.5} &amp;= {P_{t \geq 0.5}} \\
+                &amp;= \frac {C_{t \geq 0.5}} {r} \\\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}V_{t \geq 0}    &amp;= V_{t \geq -0.5} * (1 + r)^{0.5} \\
                 &amp;= \frac {1000} {0.1} * (1 + 0.1)^{0.5}\end{split}\]</div>
-</div>
-<div class="section" id="generalization-displaced-pv">
-<h3>Generalization: Displaced PV<a class="headerlink" href="#generalization-displaced-pv" title="Permalink to this headline">¶</a></h3>
-<div class="math notranslate nohighlight">
-\[\begin{split}PV_{t \geq -n}      &amp;= \frac {C} {r}, n &gt; 0 \\
-=&gt; PV_{t \geq 0}    &amp;= PV_{t \geq -n} * (1 + r)^n\end{split}\]</div>
-<p>and</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}PV_{t \geq n}      &amp;= \frac {C} {r}, n &gt; 0 \\
-=&gt; PV_{t \geq 0}    &amp;= PV_{t \geq n} * \frac 1 {(1 + r)^n}\end{split}\]</div>
-<ul class="simple">
-<li>multiply PV by <span class="math notranslate nohighlight">\(r^n, r = \text{interest rate}, n = \text{number of times r is compounded}\)</span> if moving PV forward, divide by it if moving PV back</li>
-</ul>
 </div>
 </div>
 <div class="section" id="annuity">
@@ -563,14 +711,23 @@ PV_{t \geq 0}   &amp;= PV_{t \geq -0.5} * (1 + r)^{0.5} \\
 </div></blockquote>
 </li>
 </ul>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}PV_{1 \leq t \leq n}    &amp;= PV_{t \geq 1} - PV_{t \geq n} \\
-                        &amp;= (\frac {C} {r}) - (\frac {C} {r} * \frac {1} {(1+r)^n})  \\
-                        &amp;= \frac {C} {r} * (1 - \frac {1} {(1+r)^n}) \\
-\\
-where, \\
-\\
-n = \text{number of cash flow periods}\end{split}\]</div>
+\[\begin{split}V_{0 \leq t \leq n} &amp;= A_{1 \leq t \leq n} \\
+                    &amp;= P_{t \geq 1} - P_{t \geq n} \\
+                    &amp;= (\frac {C} {r}) - (\frac {C} {r} * \frac {1} {(1+r)^n}) \\
+                    &amp;= \frac {C} {r} * (1 - \frac {1} {(1+r)^n}) \\\end{split}\]</div>
+<ul class="last simple">
+<li><span class="math notranslate nohighlight">\(A_{1 \leq t \leq n} =\)</span> an annuity that starts on period t=1 and ends at period t=n</li>
+<li>n = number of cash flow periods</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last math notranslate nohighlight">
+\[A_{a \leq t \leq b} = A_{c \leq t \leq d}, \text{for any }b-a=d-c\]</div>
+</div>
 <div class="section" id="example-basic-annuity">
 <h3>Example: Basic Annuity<a class="headerlink" href="#example-basic-annuity" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">10</span><span class="o">%</span>
@@ -579,7 +736,7 @@ n = \text{number of cash flow periods}\end{split}\]</div>
 </pre></div>
 </div>
 <div class="math notranslate nohighlight">
-\[\begin{split}PV  &amp;= \frac {C} {r} * (1 - \frac {1} {(1+r)^n}) \\
+\[\begin{split}V  &amp;= \frac {C} {r} * (1 - \frac {1} {(1+r)^n}) \\
     &amp;= \frac 1000 0.1 * (1 - \frac 1 {1.1^{20}}) \\
     &amp;= 8513\end{split}\]</div>
 </div>
@@ -591,7 +748,7 @@ n = \text{number of cash flow periods}\end{split}\]</div>
 </pre></div>
 </div>
 <div class="math notranslate nohighlight">
-\[\begin{split}PV  &amp;= \frac {C} {r} * (1 - \frac {1} {(1+r)^n})*(1+r) \\
+\[\begin{split}V  &amp;= \frac {C} {r} * (1 - \frac {1} {(1+r)^n})*(1+r) \\
     &amp;= \frac {1000} {0.1} * (1 - \frac 1 {1.1^{21}}) * 1.1 \\
     &amp;= 9513.56\end{split}\]</div>
 </div>
@@ -604,8 +761,8 @@ r = 10%
 </pre></div>
 </div>
 <div class="math notranslate nohighlight">
-\[\begin{split}PV_{0 \geq t \geq 25}   &amp;= PV_{t \geq 5, n=20} \\
-                        &amp;= PV_{5 \geq t  \geq 25} \\
+\[\begin{split}V_{0 \geq t \geq 25}   &amp;= V_{t \geq 5, n=20} \\
+                        &amp;= V_{5 \geq t  \geq 25} \\
                         &amp;= \frac {\frac {C} {r} * (1 - \frac {1} {(1+r)^n})*(1+r)} {(1+r)^4} \\
                         &amp;= \frac {1000} {0.1} * (1 - \frac 1 {1.1^{20}}) * 1.1\end{split}\]</div>
 </div>
@@ -615,7 +772,7 @@ r = 10%
 <li>Draw good timeline</li>
 <li>Idenfity cash flow stream</li>
 <li>Apply std formula</li>
-<li>this gives PV exactly one period before first cash flow</li>
+<li>this gives V exactly one period before first cash flow</li>
 <li>adjust as necessary</li>
 </ol>
 </div>
@@ -638,7 +795,7 @@ r = 10%
 <div class="section" id="growth-annuity">
 <h3>Growth Annuity<a class="headerlink" href="#growth-annuity" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}PV = \frac C {r-g} * (1-(\frac {1+g} {1+r})^n)\\\text {as } n \rightarrow \infty , (\frac {1+g} {1+r})^n \rightarrow 0 , \text{ and } PV = \frac C {r-g}\end{aligned}\end{align} \]</div>
+\[ \begin{align}\begin{aligned}V = \frac C {r-g} * (1-(\frac {1+g} {1+r})^n)\\\text {as } n \rightarrow \infty , (\frac {1+g} {1+r})^n \rightarrow 0 , \text{ and } V = \frac C {r-g}\end{aligned}\end{align} \]</div>
 </div>
 <div class="section" id="example-retirement-savings-plan">
 <h3>Example: Retirement Savings Plan<a class="headerlink" href="#example-retirement-savings-plan" title="Permalink to this headline">¶</a></h3>
@@ -655,11 +812,11 @@ how much must you deposit each year?
 </div>
 <img alt="_images/cash_flows.png" src="_images/cash_flows.png" />
 <div class="math notranslate nohighlight">
-\[\begin{split}\text{Amount needed at t=65}    &amp;= PV_{66 \leq t \leq 85} \\
+\[\begin{split}\text{Amount needed at t=65}    &amp;= V_{66 \leq t \leq 85} \\
                                 &amp;= \frac {C_{First Withdrawl}} {r-g} * (1-(\frac {1+g} {1+r})^n) \\
                                 &amp;= \frac {-100000} {0.1-0.03} * (1-(\frac {1.03} {1.1})^{20})\end{split}\]</div>
 <div class="math notranslate nohighlight">
-\[\begin{split}PV_{21 \leq t \leq 65}  &amp;= - PV_{66 \leq t \leq 85} \\
+\[\begin{split}V_{21 \leq t \leq 65}  &amp;= - V_{66 \leq t \leq 85} \\
                 &amp;= - \frac {C_{deposit}} {0.1} * (1-(\frac {1} {1+0.1})^{45}) *(1+0.1)^{45} \\\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[C_{deposit} = \text{how much we must deposit each year}\]</div>
@@ -676,11 +833,11 @@ how much must you deposit each year?
 \[\begin{split}\text{eff 1/2 rate} &amp;= (1+0.02)^2 - 1 \\
                     &amp;= 0.0404\end{split}\]</div>
 <div class="math notranslate nohighlight">
-\[\begin{split}PV_\text{bank acc today t=0}    &amp;= \frac {4000} {0.0404} * (1 - \frac 1 {1.0404^{10}} * (1 + 0.0404)^{11} \\
+\[\begin{split}V_\text{bank acc today t=0}    &amp;= \frac {4000} {0.0404} * (1 - \frac 1 {1.0404^{10}} * (1 + 0.0404)^{11} \\
                                 &amp;= 50057\end{split}\]</div>
 <div class="math notranslate nohighlight">
-\[\begin{split}PV_\text{bank acc today t=0} &amp;= PV_\text{withdrawls from today} \\
-PV_\text{bank acc today t=0} &amp;= PV_\text{withdrawls from today PT1} + PV_\text{withdrawls from today PT2} \\
+\[\begin{split}V_\text{bank acc today t=0} &amp;= V_\text{withdrawls from today} \\
+V_\text{bank acc today t=0} &amp;= V_\text{withdrawls from today PT1} + V_\text{withdrawls from today PT2} \\
 50057 &amp;= [2C + \frac {2C} {0.035} * (1 - \frac 1 {1.035^5})] + [\frac C {0.035} * (1 - \frac 1 {1.035^6}) * \frac 1 {1.035^5}]\end{split}\]</div>
 </div>
 <div class="section" id="question-9">
@@ -702,7 +859,7 @@ cont comp r = ln 1.1\end{split}\]</div>
 \[Borrow $10000, r = 20\%
 Int = 2000/12000 \rightarrow $1000/month \text{in interest payments}\]</div>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}PV = 10000 = \frac {1000} r * (1 - \frac 1 {(1+r)^{12}})\\emr = (1 + EAR)^{1/12} - 1\end{aligned}\end{align} \]</div>
+\[ \begin{align}\begin{aligned}V = 10000 = \frac {1000} r * (1 - \frac 1 {(1+r)^{12}})\\\text{effective montlhy rate} = emr = (1 + EAR)^{1/12} - 1\end{aligned}\end{align} \]</div>
 </div>
 </div>
 </div>

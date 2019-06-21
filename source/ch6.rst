@@ -22,24 +22,24 @@ Present Value vs Future Value
 .. math::
 
     FV  &= PV + rPV \\
-        &= PV(1+r) \\
+        &= PV(1+r)
 
 .. math:: 
 
-    FV_{t=2} &= PV(1+r)^2 \\
+    FV_{t=2} = PV*(1+r)^2 \\
 
 .. admonition:: Future Value of Investement
 
     .. math::
 
-        FV_{t=n} = PV(1+r)^n
+        FV_{t=n} = PV*(1+r)^n
         
         
-    - n = the number of compounding periods  
+    - n = the number of compounding periods *in between PV and FV*
     - PV = the present value of investment (capital)  
     - :math:`FV_{t=n}` is the future value of an investment at the nth period  
 
-.. note:: 
+.. hint:: 
 
     - r and n should talk in terms of the same time frame
 
@@ -48,14 +48,110 @@ Present Value vs Future Value
 
 
 
+Brandon's Point of View Value Conversion Formula
+````````````````````````````````````````````````
+
+.. important::
+
+    .. math::
+
+        V_{t=f} = V_{t=i}*(1+r)^{c*(f-i)}
+        
+    - :math:`V_{t=t_o} =` Value of Investment at time :math:`t_o`
+    - :math:`r =` interest rate compounded at the same unit of time as :math:`t_o`
+    - f = final year
+    - i = initial year
+    - c = number of times interest is compounded per year
+    
+
+    .. note::
+
+        Compared to other formula:
+
+        - :math:`n = c*(f-i)`
+        - :math:`PV = V_{t=i}`
+        - :math:`FV = V_{t=f}`
+        - new formula encapsulates the idea of moving the point of view of different valuations
+
+
+.. admonition:: Alternate POV Conversion Formula
+
+    .. math::
+
+        V_{t \geq -n} \text{ is given}, n > 0 \rightarrow V_{t \geq 0} = V_{t \geq -n} * (1 + r)^n \\
+        \\
+        and \\
+        \\
+        V_{t \geq n} \text{ is given}, n > 0 \rightarrow V_{t \geq 0} = V_{t \geq n} * \frac 1 {(1 + r)^n}
+
+
+    - multiply V by :math:`r^n, r = \text{interest rate}, n = \text{number of times r is compounded}` if moving V forward, divide by it if moving V back
+
+
+Nominal Interest Rates
+----------------------
+
+- **nominal interest rate**, an interest rate "as stated" without adjustment for the full effect of compounding
+
+    - is the effective interest rate compounded yearly
+    - an interest rate is called nominal if the frequency of compounding (e.g. a month) is not identical to the basic time unit in which the nominal rate is quoted (normally a year)
+    - e.g. "8% per year, compounded monthly" = nominal 8% per year compounded 12 times per year = :math:`j_{12} = 0.08`
+
+
+.. admonition:: Naming of Nominal Interest Rates
+
+    .. math:: 
+        
+        \text{nominal annual rate} = \text{nominal yearly rate} = j_1 \\
+        \text{nominal quarterly rate} = j_4 \\
+        \text{nominal monthly rate} = j_{12}
+
+
 Effective Interest Rates
 ------------------------
+
+
+- **Effective Interest Rate (EIR)**, the interest rate on a loan or financial product restated from the nominal interest rate as an interest rate with annual compound interest payable in arrears.
+
+    - It is used to compare the annual interest between loans with different compounding periods like week, month, year, etc.
 
 - **Effective Annual Rate (EAR)**, the interest rate as if it were compounded yearly instead of its actual compounding period
 
 
+Conversion Between Nominal And Effective Interest Rates
+```````````````````````````````````````````````````````
+
+.. important::
+
+    .. math::
+
+        \frac {j_n} {n} = EIR_n
+
+    - :math:`j_n =` nominal interest rate (that's expressed as an interest rate compounded yearly) for an effective interest rate componded n times monthly 
+    - :math:`EIR_n` effective interest rate compounded n times monthly
+
+.. note:: 
+
+    The nominal interest rate is the same as the effective annual interest rate.
+
+    .. math::
+
+        j_1 = EIR_1
+
+.. admonition:: Naming of Effective Interest Rates
+
+    .. math:: 
+        
+        EAR = \text{effective annual rate} = \text{effective yearly rate} = EIR_{1} \\
+        EQR = \text{effective quarterly rate} = EIR_{4} \\
+        EMR = \text{effective monthly rate} = EIR_{12}
+
+    - **Annual Percentage Rate (APR)**, an interest rate that is expressed as an EAR for an interest rate compounded twice per year (in Canada), often used for expressing the interest rate on items like car financing, etc.
+
+        - :math:`APR = EIR_2`
+
 Example: Basic Effective Annual Rate
-````````````````````````````````````
+''''''''''''''''''''''''''''''''''''
 
 :: 
 
@@ -67,25 +163,39 @@ then
     after 1/2yr you will get    $10
     at t = 1 (year)             $121
 
-    effective half year return = 10%
-    eff 1 year return = 21% = EAR = effective annual rate
+    EIR_2 = effective half year rate = 10%
+    EIR_1 = EAR = 21%
 
 
-Effective Interest Rate For 1/n Year
-````````````````````````````````````
+Conversion Between Effective Interest Rates
+```````````````````````````````````````````
 
-.. admonition:: Effective Rate for 1/n Year
-
-    .. math::
-
-        \frac {j_n} {n} = eff rate for 1/n year
+.. important::
 
 
-- **Annual Percentage Rate (APR)**, an interest rate that is expressed as an EAR for an interest rate compounded twice per year (in Canada), often used for expressing the interest rate on items like car financing, etc.
+    .. math:: 
+        
+        \text{EIR}_X &= (1 + \text{EIR}_Y)^p - 1 \\
+        \text{EIR}_X &= (1 + \text{EIR}_Y)^{Y/X} - 1
+
+    - p = number of Y periods in an X period
+
+Example: Basic Conversion
+'''''''''''''''''''''''''
+
+.. math:: 
+    
+    \text{EIR}_{yearly} &= (1 + \text{EIR}_{monthly})^{12} - 1 \\
+    \text{EIR}_{1}      &= (1 + \text{EIR}_{12})^{12} - 1 
+
+.. math:: 
+
+    \text{EIR}_{monthly}    &= (1 + \text{EIR}_{yearly})^{1/12} - 1 \\
+    \text{EIR}_{12}         &= (1 + \text{EIR}_{1})^{1/12} - 1 
 
 
 Example: Converting Between Rates
-`````````````````````````````````
+''''''''''''''''''''''''''''''''''
 
 :: 
 
@@ -97,57 +207,69 @@ Example: Converting Between Rates
         J implies per year
         2 implies compounded twice per year
 
-.. admonition:: Converting Between Rates
-
-
-    .. math:: 
-        
-        EffRate_A = (1 + EffRate_B)^p - 1
-
-    - p = number of A periods in an A period
-
-
 .. math:: 
 
     j_2 = 20\% \\
-    => eff 1/2 yr   &= 0.2/2 \\
-                    &= 0.1 
 
 .. math:: 
 
-    EAR &= (1 + 0.1)^2 - 1 \\
-        &= 0.21 
+    EIR_2   &= j_2/2 \\
+    EIR_2   &= 0.2/2 \\
+            &= 0.1 
 
 .. math:: 
 
-    eff month rate = (1 + 0.1)^{\frac 1 6} - 1 \\
+    EIR_1   &= (1 + 0.1)^2 - 1 \\
+            &= 0.21 
 
 .. math:: 
 
-    r_d = 10\% - APR
+    EIR_{12} = (1 + 0.1)^{\frac 1 6} - 1
 
-==  ============    ======
-n   eff 1/n yr r    EAR
-==  ============    ======
-1   0.10            0.10
-2   0.05            0.1025
-4   0.025           0.1038 
-12  0.0083          0.1043
-==  ============    ======
+.. math:: 
+
+    r_d = 10\% - APR ??
+
+Example: Converting To Effective Annual Rate 
+''''''''''''''''''''''''''''''''''''''''''''
 
 .. math::
 
-    EAR_n = (1 + eff 1/n yr r)^n - 1 \\
+    EAR = (1 + EIR_n)^n - 1 \\
     \\
-    EAR_2 = (1 + 0.05)^2 - 1 = 0.1025 \\
-    EAR_4 = (1 + 0.025)^4 - 1 = 0.1038 \\
-    \\
-    EAR = e^q - 1, \\
-        e = Euler's Constant \\
-        q = Continuously Compounded Rate \\
-    \\
-    EAR = e^0.1 - 1 \\
+    EAR = (1 + 0.05)^2 - 1 = 0.1025 \\
+    EAR = (1 + 0.025)^4 - 1 = 0.1038 \\
+
+==  ================= =====================
+n   :math:`EIR_n`     :math:`EAR = EIR_{1}`
+==  ================= =====================
+1   0.10              0.10
+2   0.05              0.1025
+4   0.025             0.1038 
+12  0.0083            0.1043
+==  ================= =====================
+
+
+Continuously Compounded Rate
+````````````````````````````
+
+.. important:: 
+
+    .. math:: 
+
+        EAR = e^q - 1, \\
+    
+    - :math:`e = \text{Euler's Constant}`
+    - :math:`q = \text{Continuously Compounded Rate}`
+
+Example:
+''''''''
+
+.. math::
+
+    EAR = e^{0.1} - 1 \\
         = 0.10517
+
 
 Inflation
 ---------
@@ -186,18 +308,36 @@ Perpetuity
     - constant -> same amount of cash flows every period
     - regular -> periods are regular
 
-Calculating the PV of perpetuity cash flows
+.. admonition:: Calculating the PV of perpetuity cash flows
 
-Suppose cash flow every period = C
+    Suppose C = cash flow every period after period t=1
 
-.. math:: 
+    .. math:: 
 
-    PV = \frac {C} {1 + r} + \frac {C} {(1 + r)^2} + \frac {C} {(1 + r)^3} + ...    (1) \\
-    PV(1+r) = PV + rPV = C + \frac {C} {1 + r} + \frac {C} {(1 + r)^2} + ...        (2) \\
-    \\ 
-    rPV = C                                                                         (1 - 2) \\
-    \\
-    PV = \frac {C} {r}
+        PV = \frac {C} {1 + r} + \frac {C} {(1 + r)^2} + \frac {C} {(1 + r)^3} + ...    (1) \\
+        PV(1+r) = PV + rPV = C + \frac {C} {1 + r} + \frac {C} {(1 + r)^2} + ...        (2) \\
+        \\ 
+        rPV = C                                                                         (1 - 2) \\
+        \\
+        PV = \frac {C} {r}
+
+.. important::
+
+    .. math::
+
+        V_{t \geq 0} = P_{t \geq 1} = \frac {C_{t \geq 1}} r
+
+    - C - cash flow at every period starting at period t=1
+    - r - effective interest rate compounded every period
+    - :math:`P_{t \geq 1} = \text{perpetuity starting with first cash flow at period t=1}`
+    - :math:`V_{t \geq 0} = PV`
+
+.. note::
+
+    .. math::
+
+        P_{t \geq a} = P_{t \geq b}, \text{for any }a, b
+
 
 Example: Basic Perpetuity
 `````````````````````````
@@ -209,7 +349,8 @@ Example: Basic Perpetuity
 
 .. math::
     
-    PV_{t \geq 1}   &= \frac {C} {r} \\
+    V_{t \geq 0}    &= {P_{t \geq 1}} \\
+                    &= \frac {C_{t \geq 1}} {r} \\
                     &= \frac {1000} {0.01} \\
                     &= 10000 
 
@@ -221,21 +362,26 @@ Example 2: Displaced Perpetuity
     r = 10%, 
     C = $1000 p.a, starting at t=0
 
-Method 1
-''''''''
-.. math::
-
-
-    PV_{t \geq 0} = PV_{1000} + PV_{t \geq 1}
-
-Method 2
-''''''''
+Method 1: Component Addition
+''''''''''''''''''''''''''''
 
 .. math::
 
-    PV_{t \geq -1}   &= \frac {C} {r} \\
-    \\
-    PV_{t \geq 0}   &= PV_{t \geq -1} * (1 + r) \\
+    V_{t \geq 0}    &= V_{t=0} + {P_{t \geq 1}} \\
+                    &= 1000 + 10000 \\
+                    &= 11000
+
+Method 2: POV Conversion
+''''''''''''''''''''''''
+
+.. math::
+
+    V_{t \geq -1}   &= {P_{t \geq 0}} \\
+                    &= \frac {C_{t \geq 0}} {r} \\
+
+.. math::
+
+    V_{t \geq 0}    &= V_{t \geq -1} * (1 + r) \\
                     &= \frac {1000} {0.1} * (1 * 0.1) \\
                     &= 10000
 
@@ -250,28 +396,14 @@ Example: Fractionally Displaced Perpetuity
 
 .. math::
 
-    PV_{t \geq -0.5} &= \frac {C} {r} \\
-    \\
-    PV_{t \geq 0}   &= PV_{t \geq -0.5} * (1 + r)^{0.5} \\
+    V_{t \geq -0.5} &= {P_{t \geq 0.5}} \\
+                    &= \frac {C_{t \geq 0.5}} {r} \\
+
+.. math::
+
+    V_{t \geq 0}    &= V_{t \geq -0.5} * (1 + r)^{0.5} \\
                     &= \frac {1000} {0.1} * (1 + 0.1)^{0.5} 
 
-
-Generalization: Displaced PV
-````````````````````````````
-
-.. math::
-
-    PV_{t \geq -n}      &= \frac {C} {r}, n > 0 \\
-    => PV_{t \geq 0}    &= PV_{t \geq -n} * (1 + r)^n
-
-and
-
-.. math::
-
-    PV_{t \geq n}      &= \frac {C} {r}, n > 0 \\
-    => PV_{t \geq 0}    &= PV_{t \geq n} * \frac 1 {(1 + r)^n}
-
-- multiply PV by :math:`r^n, r = \text{interest rate}, n = \text{number of times r is compounded}` if moving PV forward, divide by it if moving PV back
 
 Annuity
 -------
@@ -280,15 +412,24 @@ Annuity
 
     - difference between Annuity and Perpetuity is that the cash flow ends at some point
 
-.. math::
+.. important::
 
-    PV_{1 \leq t \leq n}    &= PV_{t \geq 1} - PV_{t \geq n} \\
-                            &= (\frac {C} {r}) - (\frac {C} {r} * \frac {1} {(1+r)^n})  \\
+    .. math::
+
+        V_{0 \leq t \leq n} &= A_{1 \leq t \leq n} \\
+                            &= P_{t \geq 1} - P_{t \geq n} \\
+                            &= (\frac {C} {r}) - (\frac {C} {r} * \frac {1} {(1+r)^n}) \\
                             &= \frac {C} {r} * (1 - \frac {1} {(1+r)^n}) \\
-    \\
-    where, \\
-    \\
-    n = \text{number of cash flow periods}
+
+    - :math:`A_{1 \leq t \leq n} =` an annuity that starts on period t=1 and ends at period t=n
+    - n = number of cash flow periods
+
+.. note::
+
+    .. math::
+
+        A_{a \leq t \leq b} = A_{c \leq t \leq d}, \text{for any }b-a=d-c
+
 
 Example: Basic Annuity
 ``````````````````````
@@ -301,7 +442,7 @@ Example: Basic Annuity
 
 .. math::
 
-    PV  &= \frac {C} {r} * (1 - \frac {1} {(1+r)^n}) \\
+    V  &= \frac {C} {r} * (1 - \frac {1} {(1+r)^n}) \\
         &= \frac 1000 0.1 * (1 - \frac 1 {1.1^{20}}) \\
         &= 8513
 
@@ -317,7 +458,7 @@ Example: Displaced Annuity
 
 .. math::
 
-    PV  &= \frac {C} {r} * (1 - \frac {1} {(1+r)^n})*(1+r) \\
+    V  &= \frac {C} {r} * (1 - \frac {1} {(1+r)^n})*(1+r) \\
         &= \frac {1000} {0.1} * (1 - \frac 1 {1.1^{21}}) * 1.1 \\
         &= 9513.56
 
@@ -334,8 +475,8 @@ Example: Displaced Annuity 2
 
 .. math::
 
-    PV_{0 \geq t \geq 25}   &= PV_{t \geq 5, n=20} \\
-                            &= PV_{5 \geq t  \geq 25} \\
+    V_{0 \geq t \geq 25}   &= V_{t \geq 5, n=20} \\
+                            &= V_{5 \geq t  \geq 25} \\
                             &= \frac {\frac {C} {r} * (1 - \frac {1} {(1+r)^n})*(1+r)} {(1+r)^4} \\
                             &= \frac {1000} {0.1} * (1 - \frac 1 {1.1^{20}}) * 1.1
 
@@ -345,7 +486,7 @@ Steps
 1. Draw good timeline
 2. Idenfity cash flow stream
 3. Apply std formula
-4. this gives PV exactly one period before first cash flow
+4. this gives V exactly one period before first cash flow
 5. adjust as necessary
 
 
@@ -373,9 +514,9 @@ Growth Annuity
 
 .. math:: 
 
-    PV = \frac C {r-g} * (1-(\frac {1+g} {1+r})^n)
+    V = \frac C {r-g} * (1-(\frac {1+g} {1+r})^n)
 
-    \text {as } n \rightarrow \infty , (\frac {1+g} {1+r})^n \rightarrow 0 , \text{ and } PV = \frac C {r-g}
+    \text {as } n \rightarrow \infty , (\frac {1+g} {1+r})^n \rightarrow 0 , \text{ and } V = \frac C {r-g}
 
 
 Example: Retirement Savings Plan
@@ -397,13 +538,13 @@ Example: Retirement Savings Plan
 
 .. math::
 
-    \text{Amount needed at t=65}    &= PV_{66 \leq t \leq 85} \\ 
+    \text{Amount needed at t=65}    &= V_{66 \leq t \leq 85} \\ 
                                     &= \frac {C_{First Withdrawl}} {r-g} * (1-(\frac {1+g} {1+r})^n) \\
                                     &= \frac {-100000} {0.1-0.03} * (1-(\frac {1.03} {1.1})^{20})
 
 .. math::
 
-    PV_{21 \leq t \leq 65}  &= - PV_{66 \leq t \leq 85} \\
+    V_{21 \leq t \leq 65}  &= - V_{66 \leq t \leq 85} \\
                     &= - \frac {C_{deposit}} {0.1} * (1-(\frac {1} {1+0.1})^{45}) *(1+0.1)^{45} \\
 
 .. math::
@@ -430,13 +571,13 @@ Question 8
 
 .. math::
 
-    PV_\text{bank acc today t=0}    &= \frac {4000} {0.0404} * (1 - \frac 1 {1.0404^{10}} * (1 + 0.0404)^{11} \\
+    V_\text{bank acc today t=0}    &= \frac {4000} {0.0404} * (1 - \frac 1 {1.0404^{10}} * (1 + 0.0404)^{11} \\
                                     &= 50057
 
 .. math::
 
-    PV_\text{bank acc today t=0} &= PV_\text{withdrawls from today} \\
-    PV_\text{bank acc today t=0} &= PV_\text{withdrawls from today PT1} + PV_\text{withdrawls from today PT2} \\
+    V_\text{bank acc today t=0} &= V_\text{withdrawls from today} \\
+    V_\text{bank acc today t=0} &= V_\text{withdrawls from today PT1} + V_\text{withdrawls from today PT2} \\
     50057 &= [2C + \frac {2C} {0.035} * (1 - \frac 1 {1.035^5})] + [\frac C {0.035} * (1 - \frac 1 {1.035^6}) * \frac 1 {1.035^5}] 
 
 
@@ -469,6 +610,6 @@ Question 3
 
 .. math::
 
-    PV = 10000 = \frac {1000} r * (1 - \frac 1 {(1+r)^{12}})
+    V = 10000 = \frac {1000} r * (1 - \frac 1 {(1+r)^{12}})
 
-    emr = (1 + EAR)^{1/12} - 1
+    \text{effective montlhy rate} = emr = (1 + EAR)^{1/12} - 1

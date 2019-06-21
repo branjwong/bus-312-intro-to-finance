@@ -1,6 +1,9 @@
 Taxation and Investment Returns
 ===============================
 
+Capital Gains
+-------------
+
 .. math:: Taxable Income = \frac {Taxes} {Net Income}
 
 - capital gain occurs when you sell an asset for more than it costs
@@ -20,6 +23,9 @@ Taxation and Investment Returns
 
 4. If still negative, can carry fowards indefinitely
 
+Example: Calculating Tax against Capital Gain
+``````````````````````````````````````````````
+
 ============    =====   =============== =============== ====    ====    =====   ====    ================    ====    ====    ====
 Yr              1       :math:`1^{yr3}` :math:`1^{yr3}` 2       3       4       4'      :math:`1^{yr13}`    ...     13      13'
 ============    =====   =============== =============== ====    ====    =====   ====    ================    ====    ====    ====
@@ -34,28 +40,30 @@ Tax 40%         200     80                                      -120            
     \\
     where, \\
     \\ 
-    x_y = Recalculation Of Year X After Year Y \\
-    x' = Recalculation Of Year X After Recalculation Of Some Previous Year
+    x_y = \text{Recalculation Of Year X After Year Y} \\
+    x' = \text{Recalculation Of Year X After Recalculation Of Some Previous Year}
 
 CCA
 ---
 
-1. Calculate net additions
+.. admonition:: How To Calculate CCA
 
-    - :math:`Acquisiton - Disposals`
+    1. Calculate net additions
 
-        - acq: valued at cost
-        - disp: losses of cost and selling price
+        - :math:`Acquisiton - Disposals`
 
-2. If positive, add CCA = half of net additions to UCC and calc CCA
+            - acq: valued at cost
+            - disp: losses of cost and selling price
 
-    - **Undepreciated capital cost (UCC)**, the balance of the capital cost left for further depreciation at any given time.
+    2. If positive, add CCA = half of net additions to UCC and calc CCA
 
-3. If negative, add the (neg) number to UCC and calculate CCA
+        - **Undepreciated capital cost (UCC)**, the balance of the capital cost left for further depreciation at any given time.
+
+    3. If negative, add the (neg) number to UCC and calculate CCA
 
 
 Example: UCC Over Time
-----------------------
+``````````````````````
 
 :: 
 
@@ -128,7 +136,7 @@ Year    Start UCC   Net additions   CCA         End UCC
                     = 506.25
 
 Example: Terminal Loss vs CCA Recapture
----------------------------------------
+```````````````````````````````````````
 
 Buy a vehicle for 80000
 
@@ -158,7 +166,7 @@ Loss of value = 80000-20000=60000
 
 
 Example: Taxable Income Sources
--------------------------------
+```````````````````````````````
 
 ::
 

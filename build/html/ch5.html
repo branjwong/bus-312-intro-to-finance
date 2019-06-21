@@ -151,10 +151,16 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Taxation and Investment Returns</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#cca">CCA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#example-ucc-over-time">Example: UCC Over Time</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#example-terminal-loss-vs-cca-recapture">Example: Terminal Loss vs CCA Recapture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#example-taxable-income-sources">Example: Taxable Income Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#capital-gains">Capital Gains</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-calculating-tax-against-capital-gain">Example: Calculating Tax against Capital Gain</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cca">CCA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-ucc-over-time">Example: UCC Over Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-terminal-loss-vs-cca-recapture">Example: Terminal Loss vs CCA Recapture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-taxable-income-sources">Example: Taxable Income Sources</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#assignment-4-question-3">Assignment 4, Question 3</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#asset-class-x">Asset Class X</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#asset-class-y">Asset Class Y</a></li>
@@ -282,6 +288,8 @@
             
   <div class="section" id="taxation-and-investment-returns">
 <h1>Taxation and Investment Returns<a class="headerlink" href="#taxation-and-investment-returns" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="capital-gains">
+<h2>Capital Gains<a class="headerlink" href="#capital-gains" title="Permalink to this headline">¶</a></h2>
 <div class="math notranslate nohighlight">
 \[Taxable Income = \frac {Taxes} {Net Income}\]</div>
 <ul>
@@ -313,6 +321,8 @@
 <li><p class="first">If still negative, can carry fowards indefinitely</p>
 </li>
 </ol>
+<div class="section" id="example-calculating-tax-against-capital-gain">
+<h3>Example: Calculating Tax against Capital Gain<a class="headerlink" href="#example-calculating-tax-against-capital-gain" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="13%" />
@@ -390,11 +400,15 @@
 \\
 where, \\
 \\
-x_y = Recalculation Of Year X After Year Y \\
-x' = Recalculation Of Year X After Recalculation Of Some Previous Year\end{split}\]</div>
+x_y = \text{Recalculation Of Year X After Year Y} \\
+x' = \text{Recalculation Of Year X After Recalculation Of Some Previous Year}\end{split}\]</div>
+</div>
+</div>
 <div class="section" id="cca">
 <h2>CCA<a class="headerlink" href="#cca" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic">
+<div class="admonition-how-to-calculate-cca admonition">
+<p class="first admonition-title">How To Calculate CCA</p>
+<ol class="last arabic">
 <li><p class="first">Calculate net additions</p>
 <blockquote>
 <div><ul>
@@ -421,7 +435,7 @@ x' = Recalculation Of Year X After Recalculation Of Some Previous Year\end{split
 </ol>
 </div>
 <div class="section" id="example-ucc-over-time">
-<h2>Example: UCC Over Time<a class="headerlink" href="#example-ucc-over-time" title="Permalink to this headline">¶</a></h2>
+<h3>Example: UCC Over Time<a class="headerlink" href="#example-ucc-over-time" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Starting</span> <span class="n">UCC</span> <span class="o">=</span> <span class="mi">4000</span>
 <span class="n">CCA</span> <span class="n">rate</span> <span class="o">=</span> <span class="mi">50</span><span class="o">%</span>
 
@@ -511,7 +525,7 @@ x' = Recalculation Of Year X After Recalculation Of Some Previous Year\end{split
                 = 506.25\end{split}\]</div>
 </div>
 <div class="section" id="example-terminal-loss-vs-cca-recapture">
-<h2>Example: Terminal Loss vs CCA Recapture<a class="headerlink" href="#example-terminal-loss-vs-cca-recapture" title="Permalink to this headline">¶</a></h2>
+<h3>Example: Terminal Loss vs CCA Recapture<a class="headerlink" href="#example-terminal-loss-vs-cca-recapture" title="Permalink to this headline">¶</a></h3>
 <p>Buy a vehicle for 80000</p>
 <blockquote>
 <div><span class="math notranslate nohighlight">\(\Sigma CCA = 50000\)</span></div></blockquote>
@@ -586,7 +600,7 @@ x' = Recalculation Of Year X After Recalculation Of Some Previous Year\end{split
 </ul>
 </div>
 <div class="section" id="example-taxable-income-sources">
-<h2>Example: Taxable Income Sources<a class="headerlink" href="#example-taxable-income-sources" title="Permalink to this headline">¶</a></h2>
+<h3>Example: Taxable Income Sources<a class="headerlink" href="#example-taxable-income-sources" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Salary                  Directly
 +- Alimony              Directly
 - RRSP contribution     Directly
@@ -629,6 +643,7 @@ Net Income                  74900
                             <span class="o">-------</span>
 <span class="n">Net</span> <span class="n">Federal</span> <span class="n">Tax</span>             <span class="mi">18100</span>
 </pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="assignment-4-question-3">

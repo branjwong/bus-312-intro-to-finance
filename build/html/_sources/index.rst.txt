@@ -18,6 +18,7 @@ Welcome to BUS 312 Introduction To Finance's documentation!
     ch6
     class_info
 
-.. |date| date::
+.. |date| date:: %a %b %d %Y
+.. |time| date:: %I:%M:%S%p
 
-This document was last generated on |date|.
+This document was generated on |date| at |time|.
