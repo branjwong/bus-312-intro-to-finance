@@ -59,9 +59,9 @@ Brandon's Point of View Value Conversion Formula
         
     - :math:`V_{t=t_o} =` Value of Investment at time :math:`t_o`
     - :math:`r =` interest rate compounded at the same unit of time as :math:`t_o`
-    - f = final year
-    - i = initial year
-    - c = number of times interest is compounded per year
+    - f = final time
+    - i = initial time
+    - c = number of times interest is compounded per unit of time
     
 
     .. note::
@@ -127,8 +127,8 @@ Conversion Between Nominal And Effective Interest Rates
 
         \frac {j_n} {n} = EIR_n
 
-    - :math:`j_n =` nominal interest rate (that's expressed as an interest rate compounded yearly) for an effective interest rate componded n times monthly 
-    - :math:`EIR_n` effective interest rate compounded n times monthly
+    - :math:`j_n =` nominal interest rate (that's expressed as an interest rate compounded yearly) for an effective interest rate componded n times yearly 
+    - :math:`EIR_n` effective interest rate compounded n times yearly
 
 .. note:: 
 
@@ -257,7 +257,7 @@ Continuously Compounded Rate
 
     .. math:: 
 
-        EAR = e^q - 1, \\
+        EAR = e^q - 1
     
     - :math:`e = \text{Euler's Constant}`
     - :math:`q = \text{Continuously Compounded Rate}`
