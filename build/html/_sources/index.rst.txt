@@ -16,6 +16,8 @@ Welcome to BUS 312 Introduction To Finance's documentation!
     ch4
     ch5
     ch6
+    ch7
+    ch8
     class_info
 
 .. |date| date:: %a %b %d %Y
