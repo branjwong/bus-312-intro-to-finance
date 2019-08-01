@@ -99,7 +99,7 @@ Yield to Maturity
 
     - the bound matures in n/2 years
     - the invoice price of a bond is the presevent value of the annuity of the coupons plus the present valu eof the lump sum par value payment
-    - because the bond value is established in trading between bond market participants, the coupons and par value repayment are fixed, while **the yield is a makret determined rate**.
+    - because the bond value is established in trading between bond market participants, the coupons and par value repayment are fixed, while **the yield is a market determined rate**.
 
 
 
@@ -276,11 +276,10 @@ Risk
 - There a number of risks associated with fixed income financial assets.
 
 Price Risk + Interest Rate Risk
-------------------------------
+-------------------------------
 
 - Lower coupon rate bonds one have greater prime risk than lower coupon rate bonds, all else equal.
 - Longer term bonds have greater price risk than shorter term bonds, all else equal.
-
 
 Default Risk
 ------------

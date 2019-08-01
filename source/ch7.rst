@@ -276,11 +276,10 @@ Risk
 - There a number of risks associated with fixed income financial assets.
 
 Price Risk + Interest Rate Risk
-------------------------------
+-------------------------------
 
 - Lower coupon rate bonds one have greater prime risk than lower coupon rate bonds, all else equal.
 - Longer term bonds have greater price risk than shorter term bonds, all else equal.
-
 
 Default Risk
 ------------

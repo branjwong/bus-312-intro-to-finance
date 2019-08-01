@@ -558,8 +558,6 @@ Assignment Questions
 Question 8
 ``````````
 
-.. image:: sometng
-
 .. math::
 
     \text{eff q rate} = \frac {0.08} 4 = 0.02

@@ -43,7 +43,76 @@ final
 
 - 40-50%
 - effectively cummulative, questions only from second half
+- can write in pencil
+- bring a straight edge
+- when studying
 
+    - focus on "why am I using this formula?"
+    - some questions in back of chapters in textbook
+
+- not testable
+
+    - cash budget
+
+- testable 
+
+    - CCA stuff
+
+    - 6.
+
+        - mortgage int/practice
+
+    - 7
+
+        - terminology 
+        - valuation
+        - how value changes
+
+            - premium bonds, discount bonds, parvalue bonds
+
+        - HPRR calculation
+        - accrued interest
+        - ytm = current yield + cap gain
+        - risks
+
+    - 8
+
+        - terminology
+        - preference shares
+        - common shares 
+            
+            - cash cow
+            - constant growth
+                
+                - p =  (1-b)E/[(r-b)ROE]
+                - PVGO (present value of growth opportunities)
+            
+        - efficient market hypothesis and implications
+        - share issues
+    
+    - 9
+
+        - payback
+        - ARR accounting/average rate of return
+        - IRR
+
+            - NPV schedule
+            - pitfalls of IRR
+            
+                - opp to conventional
+                - multiple IRRs
+                - mutually exclusive projects
+
+        - NPV
+
+            - cash flows
+            - NPV calculation
+            - PVCCATS
+            - terminal asset effects
+        
+    - 10
+
+        - WACC
 
 tests in general
 ----------------

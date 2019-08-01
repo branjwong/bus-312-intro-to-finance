@@ -44,7 +44,7 @@ Market Capitalization Rate
 Cash Cow
 ````````
 
-.. image:: straight_line
+.. image:: _static/straight_line.png
 
 .. math::
 
@@ -53,7 +53,7 @@ Cash Cow
 Constant Growth
 ```````````````
 
-.. image:: constant_growth
+.. image:: _static/constant_growth.png
 
 .. math::
 
@@ -96,8 +96,6 @@ b = retention ratio
 
 E = earnings
 
-.. image:: earnings
-
 - ROE here is different than the historic ROE we looked at before
 - this ROE is on new money invested
 
@@ -126,6 +124,8 @@ ROE     --      0.2     0.05
 Pr      35      46.67   28.33
 g       0       0.04    2.5
 ====    =====   =====   =====
+
+- EPS = earnings per share (probs in form of dividend)
 
 - is the company doing well with the money it's retaining?
     
@@ -165,27 +165,32 @@ Efficient Market Hypothesises
 Example
 
 *MV = market value of firm
-                general     cash offering   rights offering
-                ideal       underpricing    
+
 =============   =========   ==============  ======================
+\               general     cash offering   rights offering
+=============   =========   ==============  ======================
+\               ideal       underpricing    \
+\               \           \               \
+\               \           \               \
 MV              50000
 shares          1000
 Sh price        50
-
+\               \           \               \
 NPV             30000
 MV              80000
 SH price        80
 Invest needed   20000
 Issue price     80          75              50
 #new shares     250*        266.7           400**
-
+\               \           \               \
 MV              100000      100000          100000
 # shares        1250        1266.7          1400
 SH price        80          78.95           71.43
+=============   =========   ==============  ======================
 
 
-*: 250 = 20000/80
-** 1000/400 = 2.5 rights needed to buy a new share
+- *: 250 = 20000/80
+- ** 1000/400 = 2.5 rights needed to buy a new share
 
 - rights offerings must be priced at below value of shares for general case
 
@@ -193,32 +198,78 @@ SH price        80          78.95           71.43
 
     - shareprice is a function of the expectation on dividend behavior
 
+.. math::
 
-Lost Value over 2.5 Shares  = Value of 2.5 Old Shares - Value of 2.5 New Shares ??
-                            = 2.5 * 80 - 2.5 * 71.43
-                            = 200 - 178.56
-                            = 21.43
-                            ???
+    \text{Lost Value over 2.5 Shares}   &= \text{Value of 2.5 Old Shares} - \text{Value of 2.5 New Shares ??} \\
+                                        &= 2.5 * 80 - 2.5 * 71.43 \\
+                                        &= 200 - 178.56 \\ 
+                                        &= 21.43 \\ 
+                                        ???
 
-A Right is 2.5 shares in this ex.
+A Right is granted per 2.5 shares in this ex.
 
-Value of Right = 21.43/2.5 = 8.57 ??
+.. math:: 
+
+    \text{Value of Right}   &= 21.43/2.5 \\
+                            &= 8.57 \\
+                            ??
 
 
-
-                        Exercise        Sell        Trash
+====================    ==========      =========   ========
+\                       Exercise        Sell        Trash
+====================    ==========      =========   ========
 # shares                100             100         100
 Start Eq                8000            8000        8000
 Start Bank a/c          5000            5000        5000
 Start Wealth            13000           13000       13000
-
+\                       \               \           \
 # shares bought         40              --          --
 cash from rights        -2000           857         --
-
+\                       \               \           \
 # shared owned          140             100         100
 End Eq                  10000*          7143        7143
 End bank a/c            3000            5857        5000
 End Wealth              13000           13000       12143**
+====================    ==========      =========   ========
 
-*71.43 * 140 = 10000
-**note: 13000-12143 = 857
+- *71.43 * 140 = 10000
+- **note: 13000-12143 = 857
+
+
+Assignment 9 - Question 4
+`````````````````````````
+
+==============  ============
+Elect           20  
+Chem            X
+\               \
+MV              20+X
+\               \
+Sh Pr           (20+X)/n
+\               \
+Inv needed      24
+Rights/Share    1:1
+\               \
+\               \
+#Sh             2n
+New MV          20 + x + 24
+New Shp         (44 + x)/2n
+==============  ============
+
+suppose:
+
+    .. math::     
+
+        (44+x)/2n = 0.75*(20x)/n
+        x = 28
+
+
+Value of a right = 0.80
+
+    - value of the right is a function of the share price, so you can figure out the old share price from the value of the right
+
+Old Share Price = 0.80/0.25 = 3.20
+New Share Price = 2.40
+
+3.2 = (20 + 2.8) / n => n = 4.8/3.2 = 15
+

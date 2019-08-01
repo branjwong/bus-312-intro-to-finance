@@ -1,0 +1,58 @@
+Company Performance Evaluation
+==============================
+
+- typical business investments do not grow
+
+    - a particular Tim Hortons location cannot indefinitely increase the number of donuts and cups of coffee it sells
+    - it has constraints preventing this (e.g. space)
+    - Tim Hortons grows by adding locations, which requires expenditures like trade capital (TC) and depreciable assets (CAPX)
+
+- this chapter applies techniques of Chapter 9 to entire companies instead (that grow) instead of individual business investments (that do not grow)
+
+Applications of the WACC
+------------------------
+
+- **the weighted average cost of capital (WACC)**, a methodology for using financial market information to *indirectly* determine an opportunity cost rate of return for a firm's assets as the weighted average of the cost of the opportunity cost rates of returns for financial assets
+
+Expansion Projects
+``````````````````
+
+- WACC can be used for analysis of *expansion type projects*
+- WACC is an opportunity cost rate for *existing assets*
+- We can use the WACC in NPV analysis to value a firm's existing assets
+- We can use the WACC to value new ventures **if** these ventures have the same risk as existing operations
+
+    - we can describe the new venture as an expansion
+
+- Even if a new venture is known to have greater or lesser risk than a firm's existing business, the WACC is still a useful approximation
+
+    - might calc WACC then add/subtract a project specific increment to reflect the difference in risk
+
+Corporate Performance Evaluation
+````````````````````````````````
+
+- WACC can be used for corporate performance evaluation
+- the rate of return on invested capital after tax and after depreciation is the rate of return that a firm earns for all of its financial asset holders
+- one doesn't know if this ROIC is high/low unless we benchmark instead
+    
+    - WACC is the appropriate benchmark
+
+- if expected ROIC for a firm > a firm's WACC, then the firm is able to generate returns for its financial asset-holders that exceed their composite opportunity cost -- the WACC
+
+    - financial characteristics of such a firm
+
+        - high price/earnings ratio
+        - high market-to-book ratio
+        - high share price (or high shareholders' wealth for a private coproration)
+
+
+
+
+.. math::
+
+    WACC = \frac {E_1} V * r_{e1} + \frac {E_2} V * r_{e2} + \frac {D_1} V * (1 - \tau) + \frac {D_2} V * (1 - \tau)
+
+
+.. math::
+
+    E_1 + E_2 + D_1 + D_2 = V
