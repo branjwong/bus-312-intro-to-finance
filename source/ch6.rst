@@ -1,5 +1,5 @@
-The Mathematics of Finance
-==========================
+Ch 6: The Mathematics of Finance
+================================
 
 Introduction
 ------------

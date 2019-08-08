@@ -1,5 +1,5 @@
-Financial Analysis with Financial Statements
-============================================
+Ch 2: Financial Analysis with Financial Statements
+==================================================
 
 - not a course about accounting
 - more about getting information out of financial statements

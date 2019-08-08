@@ -1,5 +1,5 @@
-Business Investment
-===================
+Ch 9: Business Investment
+=========================
 
 - common finance question: "what is the return on this business investment?"
 

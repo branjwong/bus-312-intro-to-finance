@@ -1,5 +1,5 @@
-Fixed Income and Debt
-=====================
+Ch 7: Fixed Income and Debt
+===========================
 
 - difference bewtween debt and equity as financial assets
     
@@ -102,7 +102,6 @@ Yield to Maturity
     - risk -> price -> YTM, where the arrow shows what influences what
 
 
-
 Example - Simple Bond
 `````````````````````
 
@@ -145,13 +144,13 @@ Random Bond Facts
 
     .. math::
 
-        Pr = M \Rightarrow EIR_{y,2} = r_c
+        Pr = M \iff EIR_{y,2} = r_c
 
 .. admonition:: YTM and Invoice Price are inversely related
 
     .. math::
 
-        YTM \uparrow \text{ } \rightarrow \text{ } Pr \downarrow
+        YTM \uparrow \text{ } \iff \text{ } Pr \downarrow
 
 
 Holding Period Rate Of Return and YTMs
@@ -295,9 +294,7 @@ Premium vs. Discount Bonds
 
     .. math:: 
         
-        r_c < \text{current yield} < YTM \iff 
-        M < Pr \iff 
-        \text{discount bond}
+        \text{coupon rate} < YTM \Rightarrow \text{premium bond}
 
     - coupons are less than expected for that time period, given the current YTM
 
@@ -313,7 +310,13 @@ Premium vs. Discount Bonds
 
     - premium bond decreases in value as bond matures because
 
-        - coupons are being paid out, and 
+        - coupons are being paid out, and you'd pay less for a bond with less coupons
+
+    - discount bonds increase in value as bond matures because
+
+        - poor coupon rate initially keeps value down, as you would normally be able to invest at a rate better than the coupon rate
+        - as more coupons are paid out, you are to receive less of these sub-par coupons
+        - time approaches the time to be paid par value, the value of the bond approaches par value
 
     - jagged shape because 
 
@@ -322,23 +325,83 @@ Premium vs. Discount Bonds
         - after the first coupon is paid, the value of the bond decreases
         - between coupon payment periods, the value increases as you'd rather a bond that pays your first coupon sooner rather than later (e.g. in 1 month vs 6 months)
 
+Current Yield
+`````````````
 
-Discounted Bonds
-````````````````
+- **current yield**, the income component of the return on a bond
 
--  why would a bond be valued at less than the par value?
+.. admonition:: Definition of Current Yield
+    
+    .. math:: 
+    
+        let \text{ current yield} = CY \\
+        CY = \frac {C_{coupon}} {Pr_{bond}}
 
-    - the coupon rate is lower than prime rate?
-    - characterized by high YTM: why?
+- the expected rate of return on a bond, the YTM, is composed of its current yield and the expected increase or decrease in price which accompanies a discount or premium bond
 
-.. admonition:: Discontinued Bonds
+.. admonition:: YTM of a premium bond and CY
 
     .. math::
 
+        YTM_{premium} = CY + \frac {\text{Expected capital loss}} {Pr_{bond}} \\
+        YTM_{discount} = CY + \frac {\text{Expected capital gain}} {Pr_{bond}}
+
+
+========    ========    ============
+\           CY          Capital Gain
+========    ========    ============
+Discount    small +     small +
+Premium     big +       small -
+========    ========    ============
+        
+- overall, YTM of Discount and Preimum are expected to be equal (under what circumstances?)
+
+Summary of Premium/Discount Bond Facts
+``````````````````````````````````````
+
+.. important::
+
+    .. math:: 
+        
+        \text{premium bond} \iff 
+        r_c > \text{current yield} > YTM \iff 
+        Pr > M
+
+    .. math:: 
+        
+        \text{discount bond} \iff 
+        r_c < \text{current yield} < YTM \iff 
+        Pr < M
+
+Quoted Price, Invoice Price, Accrued Interest
+---------------------------------------------
+
+.. warning:: This section is incomplete.
+
+- **accrued interest**, a fee associated with buying/selling a bond that pays a coupon in less than a full coupon period
+
+    - an instututional feature of bond market trading -- there is no necessary reason that a bond market should require this payment
+
+.. admonition:: Definition of Accrued Interest
+    
+    .. math::
+
+        \text{accured interest} &= \text{fraction of period since last coupon was paid} * C_{coupon} \\
+                                &= \frac {\text{months since last coupon period}} {\text{months in a coupon period}} * C_{coupon} \\
+                                &= \frac {\text{months since last coupon period}} {6} * C_{coupon}, \text{ for most bonds}
+
+.. admonition:: Figuring Out Quoted Price
+
+    .. math::
+
+        \text{Expenditure} = \text{Invoice Price} = \text{Bond Value} \\
+        \\
+        \text{Expenditure} = \text{Quoted Price} + \text{Accrued Interest}
+        
         
 
-Example
-```````
+Example - Idk Wtf
+`````````````````
 
 ::
     
@@ -364,29 +427,37 @@ What does the rate of return depend on?
         &= \frac {\text{Annual Coupons in a year}} {Price} + \text{Capital Gain} \\
         &= \text{Current Yield (CY)} + \text{Capital Gain}
 
-Random Table
-
-\           Income      Capital Gain
-========    ========    ============
-Discount    small +     small +
-Premium     big +       small -
-        
-- overall, Discount and Preimum are expected to be equal (in expected value?)
 
 Risk
 ----
 
 - There a number of risks associated with fixed income financial assets.
 
-Price Risk + Interest Rate Risk
-```````````````````````````````
+Price (+ Interest Rate) Risk
+````````````````````````````
+
+- **investment horizon**, the length of time an investor is aiming to maintain their portfolio before selling their securities
+- if you have a short-term investment horizon but you a buy a longer term bond, your investment is subject to price risk
+- **price risk**, the risk arisen for debt securities for which the is an active 
+secondary market
+
+.. admonition:: Manifestation of Price Risk
+
+    If interest rates in the economy the holding period increase, the value of your bond decreases as capital gain you expect to receive decreases.
 
 - Lower coupon rate bonds one have greater prime risk than lower coupon rate bonds, all else equal.
 - Longer term bonds have greater price risk than shorter term bonds, all else equal.
 
+
 Default Risk
 ````````````
 
+- for corporate issuers of bonds, there is risk associated with corporations able to meet their contractional payments
+- the current ratio, quick ratio, times interest earned, fixed payment coverage, and debt to invested capital all can help measure a corporation's ability to pay its debts
+
+.. admonition:: Manifestation of Price Risk
+
+    If the risk of a corporation not fufilling it's contractual obligation to pay out bond payments increases, the value of your bond decreases as the expectation a corporation will pay you decreases.
 
 Reinvestment Risk
 `````````````````
@@ -394,16 +465,28 @@ Reinvestment Risk
 - uncertainty about reinvesting the coupons
 - uncertainty about what rates you will get for a coupon at a later stage
 - reinvestment gives uncertainty about what rate you will get
-- if YTMs drop in the future, you suffer because you can only invest at a lower rate, value of existing bond increases
+
+.. admonition:: Manifestation of Reinvestment Risk
+
+    If interest rates over the holding period drop, the value of your bond decreases as the wealth you expect to receive on reinvesting coupons decreases.
 
 Inflation Risk
 ``````````````
+
+- bonds offer fixed payments which are not adjusted over time
+- inflation impacts your purchasing power
+
+.. admonition:: Manifestation of Inflation Risk
+
+    If inflation rates over the holding period increase, the value of your bond decreases as the purchasing power on your fixed income remains constant.
+
+- bondholders require greater coupon rates when expected future inflation is greater
 
 
 Principal and Interest Payment Deconstruction
 ---------------------------------------------
 
-.. note:: This section is incomplete.
+.. warning:: This section is incomplete.
 
 A period's repayment can be broken up into it's principal and interest portions.
 

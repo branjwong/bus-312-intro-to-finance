@@ -1,5 +1,5 @@
-Equity Securities and Equity Markets
-====================================
+Ch 8: Equity Securities and Equity Markets
+==========================================
 
 - shares give you a say in the management of a company
 - value of a share is the present value of the future cash flows
@@ -381,5 +381,3 @@ Rights Offer
 
     - use their rights to purchase their fractional ownership of the firm in the new issue
     - sell their rights
-
-
