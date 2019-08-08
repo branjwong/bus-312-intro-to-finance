@@ -87,7 +87,6 @@ Brandon's Point of View Value Conversion Formula
 
     - multiply V by :math:`r^n, r = \text{interest rate}, n = \text{number of times r is compounded}` if moving V forward, divide by it if moving V back
 
-
 Nominal Interest Rates
 ----------------------
 
@@ -109,7 +108,6 @@ Nominal Interest Rates
 
 Effective Interest Rates
 ------------------------
-
 
 - **Effective Interest Rate (EIR)**, the interest rate on a loan or financial product restated from the nominal interest rate as an interest rate with annual compound interest payable in arrears.
 
@@ -299,6 +297,7 @@ Cash                100     112
         &= \frac {1 + 0.12} {1 + 0.8} - 1 \\
     \\
         &= 0.037
+
 
 Perpetuity
 ----------
@@ -550,6 +549,58 @@ Example: Retirement Savings Plan
 .. math::
 
     C_{deposit} = \text{how much we must deposit each year}
+
+
+Example: 2 Stage Growth
+```````````````````````
+
+.. image:: _static/2_stage_growth.png
+
+
+Net Present Value
+-----------------
+
+
+- npv (net present value of a project) = present value of benefits (of project) - present value of costs (of project)
+- look at cash flows
+- take present value of all outflows = today's equivalent value of the cost of the project
+- take present value of all inflows = today's equivalent value of all of the benefits of the project
+- benefits > costs = good project! or if benefits - costs > 0 -> good project!
+
+Example
+```````
+
+.. math:: 
+
+
+    CF_{t=0} &= -100 \\
+    CF_{t=1} &= -120 \\
+    \\
+    NPV &= -100 + 120/(1+r), r = \text{interest rate}
+
+
+The Internal Rate Of Return
+---------------------------
+
+- **internal rate of return**, a way of answering "what is the return on this business investment"
+
+    - is the *hypothetical* opportunity cost rate of return that makes NPV equal zero
+
+.. admonition:: NPV Schedule
+
+    - **NPV schedule**, a plot of :math:`NPV = f(\text{interest rate})`
+    - the IRR(s) for any given NPV schedule curve are given by when the curve hits the r = interest rate axis
+
+    .. image:: _static/npv_schedule.png
+
+- intuition for IRR relative to other NPVs
+
+    - if NPV > 0, the business investment is better for wealth creation than an equivalent financial investment with equal risk
+    - if NPV < 0, the business investment is worse
+    - if NPV = 0, the business investment is equal for wealth creation than an equivalent financial investment
+
+        - the business investment should have the same return as the financial investment
+        - the equivalent financial investment is considered as the next best opportunity, and thus lends itself to the opportunity cost rate of return
 
 
 Assignment Questions

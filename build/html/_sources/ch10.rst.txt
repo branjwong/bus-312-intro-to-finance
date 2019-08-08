@@ -46,6 +46,13 @@ Corporate Performance Evaluation
         - high share price (or high shareholders' wealth for a private coproration)
 
 
+.. math::
+
+    \text{let D = debt} \\
+    \text{let E = equity} \\
+    \text{let V = investment?} \\
+    \\
+    D + E = V
 
 
 .. math::

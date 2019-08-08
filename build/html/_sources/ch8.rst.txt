@@ -72,6 +72,7 @@ Example
 .. math::
 
     Pr_{t=0}    &= \frac {2} {0.1 - 0.05} \\
+test
                 &= 40
 
 .. math::
@@ -272,4 +273,113 @@ Old Share Price = 0.80/0.25 = 3.20
 New Share Price = 2.40
 
 3.2 = (20 + 2.8) / n => n = 4.8/3.2 = 15
+
+
+Equity Financing
+----------------
+
+- a distribution of sales is a sale of new shares to new shareholders for the purpose of financing a firm's business activities
+    
+    - if a firm has not had its shares traded on an organized public stock exchange, (i.e. it was an unlisted company,) the issuing firm must file a prospectus with the appropriate financial regulators
+        
+        - the prospectus describes the firm, its business, introduces the directors and officers, and describes the securities to be sold
+    
+    - if a firm has a listing on a stock exchange, (in Canada) the firm can sell new shares to new shareholders by simply notifiying the exchange and possibily provincial secruties regulators with an **exchange offering prospectus**
+
+        - this doucment is simler and less detailed than the traditional prospectus
+        - **seasoned issue**, a sale of new shares by a firm with a listing 
+
+- this issue is called an initial public offering and the firm will then have a listing on the stock-market after the share sale
+
+- a public firm can make a seasoned issue in one of two ways: a general cash offer or a rights issue
+
+General Cash Offer
+``````````````````
+
+- **general cash offer**, the sale of new shares to any investor, more or less, who wishes to purchase
+- on the Toronto Stock Exchange, firms can raise a maximum of 5 million over a six month period with an exchange offering prospectus
+
+Dilution in a General Cash Offer
+''''''''''''''''''''''''''''''''
+
+- when a firm sells new shares to shareholders, the fractional ownership of existing shareholders is diluted
+- earnings are shared amongst a greater number of shareholders, and the fractional ownership of any original shareholder is diminished
+- should firms avoid the use of general cash offers to avoid the impact of dilution on their shareholders?
+
+    - not necssarily
+    - if financial markets are informationally efficient, existing shareholders are not necessarily worse off because of the general cash offer (as their welath is not decreased)
+
+- when a firm sells new shareholders, although ownership is diluted, the size of the firm's market equity grows because of contributions from new shareholders
+    
+    - if the size of the growth is sufficient, the original shareholders are not worse off
+
+Example:
+
+.. image:: _static/ch8_ex_1.png
+
+:: 
+
+    current number of shares outstanding    2 million
+
+- this market value balance sheet shows the PV existing operations and planned new ventures against equity
+- the existing operations could be sold for 10 million
+- the new venture has not yet been financed so it has no trade capital assets, plant, property, or equipment
+
+    - the general cash offer will raise these funds
+
+- suppose that :math:NPV_{\text{new venture}} = PV_{gains} - PV_{losses} = 6 million - 1 million = 5 million
+- the required investment for this new venture is 1 million
+
+    - thus, new shares need to be sold
+
+- financing this venture and purchasing TC, plant, property, and equipment will turn the intangible asset into a tangible operating asset of the firm
+
+.. math:: 
+
+    Pr_share    &= \frac {\text{total market equity}} {\text{number of shares}} \\
+                &= \frac {$15 million} {2 million} \\
+                &= $7.5
+                
+- suppose that investors "see through" ABC's activities and recognize that the new venture has an NPV of $5 million 
+
+    - they are willing to pay an additional $5 million for the existing shares of ABC
+    - they are willing to pay $2.5 = 7.5 - 5 per share for the growth prospects associated with ABC's planned new venture
+
+- what price to sell new shares for?
+
+    - if Pr_{\text{new share}} > 7.5, investers will choose to buy shares in current secondary market instead
+    - if Pr_{\text{new share}} < 7.5, you're getting less for the shares than they're worth
+    - it would be good for ABC to sell its new shares at $7.5 so that investors find the new shares more attractive than the old shares
+
+- ABC must sell $1 million / 7.5 = 133,333 new shares at $7.5 to raise $1 million to finance its new venture
+- the fractional ownership of the existing shareholders will fall from 100% to :math:`\frac {2 million} {2 million + 0.133333 million} = 93.75%`
+
+.. image:: _static/ch8_ex_2.png
+
+- market value of equity is increased by the $1 millino contributed by the new shareholders
+- the share price for existing and new shareholders after financing operation is 
+
+.. math:: 
+
+    Pr_share    &= \frac {\text{total market equity}} {\text{number of shares}} \\
+                &= \frac {$16 million} {2.133333 million} \\
+                &= $7.5
+
+- no leakage of NPV of the new venture because firm set the correct price in the offer ($7.5)
+- even with no leakage and new sharholders getting 0 NPV investment, they purchase because they expect a rate of return which just compensates for the risk they bear -- the market capitalization rate
+- if they were to get a return > the market capitalization rate, the firm would be under-pricing its new shares
+
+Rights Offer
+````````````
+
+- in a rights issue, the existing shareholders are given first a preemptive "right" to buy new shares in proportion to their existing ownership
+- a rights issue is akin to a combination of a new share issue and a *stock split*
+
+    - the stock split aspect causes the share price to fall
+
+- shareholders are not worse off if they do either:
+
+    - use their rights to purchase their fractional ownership of the firm in the new issue
+    - sell their rights
+
 

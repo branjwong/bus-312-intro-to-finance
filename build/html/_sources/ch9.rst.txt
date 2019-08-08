@@ -1,6 +1,10 @@
 Business Investment
 ===================
 
+- common finance question: "what is the return on this business investment?"
+
+    - "how does this business investment compare to a financial investment with the same risk?"
+
 Payback
 -------
 
@@ -41,27 +45,44 @@ ARR = Average of Yearly Returns = (20+25+33+50)/5
 - doesn't take non cash items into account
 
 
-Internal Rate of Return (IRR)
-------------------------------
+Internal Rate of Return
+-----------------------
 
-- what is our actual rate of return
-- what is the required rate of return
-- if actual > required, good project!
+.. admonition:: Example of Calculating IRR
 
-Example
-```````
+    Suppose:
 
-::
+    .. math:: 
+        
+        CF_{t=0} = -1000 \\
+        CF_{t=1} = +1200
 
-    CF_{t=0} = -1000
-    CF_{t=1} = +1200
+    Direct Way:
 
-    IRR = (1200-100)/1000 = 200/1000 = 20%
+    .. math:: 
 
-NPV = -1000 + 1200 / (1+r) = 0 => r = 0.2
+        IRR &= \frac {1200-100} {1000} \\
+            &= \frac {200} {1000} \\
+            &= 0.2
+    
 
-Example 2
-`````````
+    NPV Way
+
+    .. math:: 
+
+            NPV                         &= 0 \\ 
+            -1000 + \frac {1200} {1+r}  &= 0, r = IRR \\
+         => r                           &= 0.2
+
+
+.. admonition:: Easy way to think about IRR
+
+    - what is our actual rate of return (== IRR ?)
+    - what is the required rate of return (== prime rate ?)
+    - if actual > required, good project!
+
+Difficult NPV Calculations
+``````````````````````````
 
 ::
 
@@ -75,28 +96,15 @@ Example 2
 
 - what r will make NPV = 0?
 
-NPV = -1000 + 400 / (1+r) + 600 / (1+r)^2 + ... - 200 / (1+r) ^ 5 = 0 => r = ... kind of hard to calc
+.. math:: 
+
+        NPV &= 0 \\ 
+        -1000 + 400 / (1+r) + 600 / (1+r)^2 + ... - 200 / (1+r) ^ 5 &= 0 \\ 
+    =>  r &= \text{... kind of hard to solve for}
 
 
 Net Present Value
 ------------------
-
-- npv (net present value of a project) = present value of benefits (of project) - present value of costs (of project)
-- look at cash flows
-- take present value of all outflows = today's equivalent value of the cost of the project
-- take present value of all inflows = today's equivalent value of all of the benefits of the project
-- benefits > costs = good project! or if benefits - costs > 0 -> good project!
-
-Example
-```````
-
-CF_{t=0} = -100
-CF_{t=1} = -120
-
-NPV = -100 + 120/(1+r)
-
-.. image:: _static/npv_schedule.png
-
 
 Example - A Poor Investment?
 ````````````````````````````
@@ -359,4 +367,12 @@ S = 25000
 PV Recap Tax = -25000 * \tau / (1+r)^5
 
 PV Cap gain tax effect = -10000 * 0.5 * \tau / (1+r)^5
+
+Example
+````````
+
+- suppose person says "if IRR higher than rate of return, then good project"
+- person saying this doesn't know about the pitfalls
+- when does he make incorrect judgements, for any required rate of return
+- note: pretty sure that IRR doesn't change as the required rate of return does, but NPV changes as the required rate of return changes
 
