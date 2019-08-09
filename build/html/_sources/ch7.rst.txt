@@ -438,8 +438,7 @@ Price (+ Interest Rate) Risk
 
 - **investment horizon**, the length of time an investor is aiming to maintain their portfolio before selling their securities
 - if you have a short-term investment horizon but you a buy a longer term bond, your investment is subject to price risk
-- **price risk**, the risk arisen for debt securities for which the is an active 
-secondary market
+- **price risk**, the risk arisen for debt securities for which the is an active secondary market
 
 .. admonition:: Manifestation of Price Risk
 

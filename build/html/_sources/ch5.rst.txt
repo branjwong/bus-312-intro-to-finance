@@ -43,23 +43,73 @@ Tax 40%         200     80                                      -120            
     x_y = \text{Recalculation Of Year X After Year Y} \\
     x' = \text{Recalculation Of Year X After Recalculation Of Some Previous Year}
 
-CCA
----
+The Capital Cost Allownace System
+---------------------------------
 
-.. admonition:: How To Calculate CCA
+- expenditures that firms make on fixed assets are not expensable for financial statement purposes or deductable for tax purposes
 
-    1. Calculate net additions
+    - e.g. plant, equipment
 
-        - :math:`Acquisiton - Disposals`
+- these expenditures are amortized over time
+- in financial statements, the amortized amount in a period is called depreciation
+- in taxation, the government of Canada allows a capital cost allowance instead of depreciation
 
-            - acq: valued at cost
-            - disp: losses of cost and selling price
+    - this is to avoid the adverse incentive for firms to exaggerate financial statement depreciation to reduce their taxes
 
-    2. If positive, add CCA = half of net additions to UCC and calc CCA
+- **capital cost allownace (CCA)**, an allowance given by the government of Canada to a firm for expensing and receiving a tax break on fixed assets
 
-        - **Undepreciated capital cost (UCC)**, the balance of the capital cost left for further depreciation at any given time.
+    - CCA reduces taxable income
 
-    3. If negative, add the (neg) number to UCC and calculate CCA
+- there isn't a definition of depreciable assets in the Income Tax Act, but assets that are subject to CCA are typically what you'd think of as depreciable
+
+.. admonition:: CCA Asset Classes
+
+    .. image:: _static/cca_asset_classes.png
+
+    - CCA is not taken on individual assets but on prescribed classes of similar assets
+    - when a taxpayer has several assets in a class, they are treated as a unit with respect to the calculation of CCA
+    - **undepreciated capital cost (UCC)** of an asset class is the declining balance of that asset class
+    
+        - the maximum CCA that may be claimed in a year calculated on the UCC
+
+
+.. admonition:: Calculating CCA and UCC's Ending Balance
+
+    .. warning:: CCA and UCC are calculated on a per-asset class basis. Don't mix up cashflows, CCAs, and UCCs from different asset classes.
+
+    let...
+
+    .. math:: 
+
+        UCC_i &= \text{Opening Balance UCC}  \\
+        CF_x &= \text{CCA Asset cashflow (acquisition or disposal) x} \\
+        \Sigma CF &= \text{net additions} \\
+        rate_{CCA} &= \text{CCA Rate} \\
+        UCC_f &= \text{Ending Balance UCC} 
+
+    such that...
+
+    .. math::
+
+        \Sigma CF = CF_1 + CF_2 + CF_3 + ... + CF_n 
+
+    .. math::
+        :nowrap:
+
+        \[ \text{multiplication factor}_{CCA} = 
+        \begin{cases} 
+            UCC_i + \frac 1 2 * {\Sigma CF}, \Sigma CF > 0 \\
+            UCC_i + \Sigma CF, \Sigma CF < 0 
+        \end{cases}
+        \]
+
+    .. math::
+
+        CCA = rate_{CCA} * \text{multiplication factor}_{CCA}
+
+    .. math::
+
+        UCC_f = UCC_i + \Sigma CF - CCA
 
 
 Example: UCC Over Time

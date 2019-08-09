@@ -1,9 +1,49 @@
-Ch 9: Business Investment
-=========================
+Ch 9: Business Investment Analysis
+==================================
+
+- **business investment analysis**, an investigation into the merits of long-term business investments
+
+    - a.k.a. Capital Expenditure Analysis, Real Asset Investment Analysis, or Capital Budgeting
 
 - common finance question: "what is the return on this business investment?"
 
     - "how does this business investment compare to a financial investment with the same risk?"
+
+Pitfalls of Business Investment Analysis
+----------------------------------------
+
+- prediction of future cash flows is a limitation of business investment analysis
+
+    - cash flows typically depend upon revenues, and realized cash flows can vary tremendously from forecasts
+    - analysis can help you learn about your investment
+    - analysis can help you uncover ways to increase cash flows
+    - analysis can help you uncover ways to reduce cash flow variability
+
+- the quantitative nature of business investment analysis is a pitfall
+
+    - placing a dollar value on future benefits has a way of suggesting exactness/certainty that does not actually exist in one's business environment
+    - can be good to have optimistic, most likely, and pessimistic sales forecasts
+
+- cash flow predictions have a way of being overly optimistic
+
+    - any investment in an organization has a *champion*
+    - champions are often incentivized to exaggerate the prospects for future benefits in order to see their investment accepted
+    - benefits may not be realized for many years -> can be difficult to discipline an investment champion for exaggerated claims 
+
+- business investment analysis is occaisonally used to justify a decision that has been already made for political reasons
+- companies grow but typical business investment does not
+
+    - there is no expectation that the investment will end at any fixed future date
+    - no expectation that cash flows will grow
+
+NPV and Business Investment
+---------------------------
+
+- NPV of a business investment can answer whether the investment is good or not
+
+    - NPV > 0 -> the business investment creates wealth
+
+- **cost of capital**, the opportunity cost for business investment analysis
 
 Payback
 -------
